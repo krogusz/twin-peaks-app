@@ -4,7 +4,7 @@
 
 <br>
 
-<h1 align="center">Twin peaks Website</h1>
+<h1 align="center">Twin Peaks Website</h1>
 
 <div style = "margin:20px 40px 20px 40px">
 Website dedicated to Twin Peaks TV series.
