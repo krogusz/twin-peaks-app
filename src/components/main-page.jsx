@@ -13,7 +13,8 @@ function MainPage(){
 return(
   <MainPage>
     <Fog 
-      density = {10}
+      density = {2}
+      maxVelocity ={2}
     />
   </MainPage>
 
