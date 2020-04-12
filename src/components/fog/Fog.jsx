@@ -1,13 +1,92 @@
 import React from 'react';
-import styled from 'styled-components';
-import FogPiece from './Fog-Piece.jsx';
-
-const CanvasContext = React.createContext();
+import styled, { keyframes } from 'styled-components';
+const fog1="https://raw.githubusercontent.com/WebDevSHORTS/Fog-Overlay-Animation/master/img/fog-1.png";
+const fog2 = "https://raw.githubusercontent.com/WebDevSHORTS/Fog-Overlay-Animation/master/img/fog-2.png";
 
 const FogDiv = styled.div`
 position: absolute;
 width:100vw;
 height:100vh;
+overflow: hidden;
+`
+
+const fog1Animation = keyframes`
+0% {
+  transform: translate3d(0, 0, 0);
+  opacity: 100%;
+}
+
+100% {
+  transform: translate3d(-200vw, 0, 0);
+  opacity: 0%;
+}
+`
+const fog2Animation = keyframes`
+0% {
+  transform: translate3d(-200vw, 0, 0);
+}
+100% {
+  transform: translate3d(0, 0, 0);
+}
+`
+const fog3Animation = keyframes`
+0% {
+  transform: translate3d(0, 0, 0);
+}
+
+100% {
+  transform: translate3d(0, -200vh, 0);
+}
+`
+const fog4Animation = keyframes`
+0% {
+  transform: translate3d(0, -200vh, 0);
+}
+100% {
+  transform: translate3d(0, 0, 0);
+}
+`
+
+const FogDivFirst = styled.div`
+position: absolute;
+background: url(${fog1});
+background-repeat: repeat-x;
+background-size: contain;
+background-position: center;
+animation: ${fog1Animation} 60s linear 2;
+height: 300vh;
+width: 300vw;
+`
+
+const FogDivSecond = styled.div`
+position: absolute;
+background: url(${fog2});
+background-repeat: repeat-x;
+background-size: contain;
+background-position: center;
+animation: ${fog2Animation} 30s linear 2;
+height: 300vh;
+width: 300vw;
+`
+const FogDivThird = styled.div`
+position: absolute;
+background: url(${fog2});
+background-repeat: repeat-x;
+background-size: contain;
+background-position: center;
+animation: ${fog3Animation} 30s linear 2;
+height: 300vh;
+width: 300vw;
+`
+const FogDivFourth = styled.div`
+position: absolute;
+background: url(${fog2});
+background-repeat: repeat-x;
+background-size: contain;
+background-position: center;
+animation: ${fog4Animation} 30s linear 2;
+height: 300vh;
+width: 300vw;
 `
 
 class Fog extends React.Component{
@@ -22,101 +101,13 @@ class Fog extends React.Component{
     }
   }
 
-  componentDidMount = () => {
-    Promise.all(this.newCoordinates()).then((paramArray) =>{
-      this.setState({
-        ctx: this.canvas.current.getContext('2d'),
-        screenWidth: this.canvas.current.parentNode.getBoundingClientRect().width,
-        screenHeight: this.canvas.current.parentNode.getBoundingClientRect().height,
-        parameters: paramArray
-      });
-      window.requestAnimationFrame(this.update)
-    })
-  }
-
-  newCoordinates = () => {
-    return(Array.from(Array(this.props.density).keys()).map(elem =>{
-      return new Promise (resolve => {
-        const params = {
-          x: this.random(0,this.state.screenWidth), 
-          y: this.random(0,this.state.screenHeight),
-          velocityX: this.random(-this.props.maxVelocity, this.props.maxVelocity),
-          velocityY: this.random(-this.props.maxVelocity, this.props.maxVelocity)
-        }
-        resolve(params)
-      })
-    }))
-  }
-
-  updateCoordinates = () => {
-    return(this.state.parameters.map(elem =>{
-      return new Promise (resolve => {
-        elem = this.ifCross(elem.x, elem.y, elem.velocityX, elem.velocityY);
-        const params = {
-          x: elem.x + elem.velocityX, 
-          y: elem.y + elem.velocityY,
-          velocityX: elem.velocityX,
-          velocityY: elem.velocityY
-        }
-        resolve(params)
-      })
-    }))
-  }
-
-  random = (min,max) => {
-    return Math.random()*(max - min) + min
-  }
-
-  ifCross = (x,y, velocityX, velocityY) => {
-    if (x > this.state.screenWidth){
-      x = this.state.screenWidth
-      velocityX = - velocityX
-    }
-
-    if (x < 0){
-      x = 0
-      velocityX = - velocityX
-    }
-
-    if (y > this.state.screenHeight){
-      y = this.state.screenHeight
-      velocityY = - velocityY
-    }
-  
-    if (y < 0){
-      y = 0
-      velocityY = - velocityY
-    }
-
-    return {x:x, y:y, velocityX:velocityX, velocityY:velocityY }
-  }
-
-  update = () => {
-    Promise.all(this.updateCoordinates()).then((paramArray) =>{
-      //here is the problem
-      // this.state.ctx.clearRect(0,0,this.state.screenWidth, this.state.screenHeight)
-      this.setState({
-        parameters: paramArray,
-      });
-      window.requestAnimationFrame(this.update)
-    })
-  }
-
-  render(){
+   render(){
     return(
       <FogDiv>
-        <canvas width={this.state.screenWidth} height={this.state.screenHeight} ref = {this.canvas} >
-          {this.state.ctx && (
-            <CanvasContext.Provider value = {this.state.ctx}>
-              {this.state.parameters.map(param =>(
-                <FogPiece
-                x = {param.x}
-                y = {param.y}
-                />  
-              ))}
-            </CanvasContext.Provider>
-          )}
-        </canvas>
+        <FogDivFirst></FogDivFirst>
+        {/* <FogDivSecond></FogDivSecond> */}
+        {/* <FogDivThird></FogDivThird> */}
+        {/* <FogDivFourth></FogDivFourth> */}
       </FogDiv>
     )
   }
@@ -124,6 +115,3 @@ class Fog extends React.Component{
 
 
 export default Fog;
-export {
-  CanvasContext
-}
