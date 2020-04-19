@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import img from '../resources/twin-peaks.jpg'
+// import img from '../resources/twin-peaks.jpg'
 import Fog from './fog/Fog.jsx';
-// const img = "https://www.cgarchitect.com/content/portfolioitems/2015/09/117567/redroomCOLOR_large.jpg"
+const img = "https://i.pinimg.com/originals/86/d3/cc/86d3ccbf2c7267c34064adc4c3a705c9.jpg"
 
 function MainPage() {
   const MainPage = styled.div`
@@ -13,9 +13,9 @@ function MainPage() {
 `
   return (
     <MainPage>
-      <Fog
-        density={500}
-      />
+      {/* <Fog
+        density={50}
+      /> */}
     </MainPage>
 
   )
