@@ -22,6 +22,7 @@ height:100vh;
 display: inline-block;
 box-sizing: border-box;
 overflow: hidden;
+
 &:hover ${ItemWrapper}{
   font-size: 1rem;
   opacity: 1;
@@ -37,6 +38,7 @@ const ItemImage = styled.div`
 background: url(${props => props.image.url});
 opacity:0;
 transition: all 1s ease;
+
 &:hover{
 opacity:1;
 width:100%;
@@ -52,7 +54,6 @@ const Item = (props) => {
   const divStyle = {
     borderLeft: `${props.first? 0 : 1}px rgba(255,255,255,.09) solid`
   }
-
   return(
   <MenuItemDiv style = {divStyle}>
     <ItemLink>
@@ -61,7 +62,6 @@ const Item = (props) => {
     </ItemWrapper> 
     <ItemImage image = {{url: props.url}}></ItemImage>
     </ItemLink>
-     
   </MenuItemDiv>
   )
 }

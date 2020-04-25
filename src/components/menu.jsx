@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Spring} from 'react-spring/renderprops'
-
+import {Spring} from 'react-spring/renderprops';
 import Item from './menu-items.jsx'
 import menuItems from '../resources/menu-items.js'
 
 const MenuDiv = styled.div`
 width:100vw;
 height:100vh;
-background-color: #282830
+background-color: #282830;
 `
 
 const Menu = (props) => {
@@ -28,7 +27,6 @@ const Menu = (props) => {
     ))}
     </MenuDiv>
   }
-
   </Spring>)
 }
 
