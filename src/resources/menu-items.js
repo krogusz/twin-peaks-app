@@ -1,7 +1,7 @@
 export default { "data":
   [
     {
-      "name": "seeries",
+      "name": "series",
       "img": "https://www.rollingstone.com/wp-content/uploads/2018/06/the-tao-of-agent-cooper-twin-peaks-cdfa845b-bb5d-4ec3-9727-668a89dc1f2e.jpg"
     },
     {

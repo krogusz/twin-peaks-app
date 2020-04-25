@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link, BrowserRouter as Router} from "react-router-dom";
 
 const ItemWrapper = styled.p`
 position: absolute ;
@@ -28,7 +29,7 @@ overflow: hidden;
   opacity: 1;
 }
 `
-const ItemLink = styled.a`
+const ItemLink = styled(Link)`
 position: relative;
 display: block;
 width:100%;
@@ -55,14 +56,14 @@ const Item = (props) => {
     borderLeft: `${props.first? 0 : 1}px rgba(255,255,255,.09) solid`
   }
   return(
-  <MenuItemDiv style = {divStyle}>
-    <ItemLink>
-    <ItemWrapper >
-      {props.name}
-    </ItemWrapper> 
-    <ItemImage image = {{url: props.url}}></ItemImage>
-    </ItemLink>
-  </MenuItemDiv>
+      <MenuItemDiv style = {divStyle}>
+        <ItemLink to={props.name}>
+        <ItemWrapper >
+          {props.name}
+        </ItemWrapper> 
+        <ItemImage image = {{url: props.url}}></ItemImage>
+        </ItemLink>
+      </MenuItemDiv>
   )
 }
 
