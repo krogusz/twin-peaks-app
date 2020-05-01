@@ -8,26 +8,34 @@ const MenuDiv = styled.div`
 width:100vw;
 height:100vh;
 background-color: #282830;
+position: absolute;
+top: 0;
 `
 
 const Menu = (props) => {
-  return (<Spring
-  config = {{tension:280, friction: 120}}
-  from={{ marginLeft: -2000  }}
-  to={{ marginLeft: props.disabled ? -2000 : 0 }}>
-  {props => 
-  <MenuDiv style={props}>
-    {menuItems["data"].map((category, i) => (
-      <Item 
-      key = {i} 
-      name = {category["name"]} 
-      url = {category["img"]}
-      first = {i === 0 ? true : false}
-      />
-    ))}
-    </MenuDiv>
-  }
-  </Spring>)
+
+    return (
+      <Spring
+      config = {{tension:280, friction: 120}}
+      from={{ marginLeft: -2000  }}
+      to={{ marginLeft: props.disabled ? -2000 : 0 }}
+    
+      >
+      {item => 
+      <MenuDiv style={item}>
+        {menuItems["data"].map((category, i) => (
+          <Item 
+          key = {i} 
+          name = {category["name"]} 
+          url = {category["img"]}
+          first = {i === 0 ? true : false}
+          onClick = {props.onClick}
+          />
+        ))}
+        </MenuDiv>
+      }
+      </Spring>
+      )
 }
 
 export default Menu;

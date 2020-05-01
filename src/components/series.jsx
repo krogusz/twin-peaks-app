@@ -1,13 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-// import {Link, BrowserRouter as Router} from "react-router-dom";
 
+const SeriesDiv = styled.div`
+// background-color: #282830;
+background-color: green;
 
+width: 100vw;
+height: 100vh;
+`
 const Series = (props) => {
   return(
-<div>
-  jestem tutaj aaaa
-</div>
+
+        <SeriesDiv style ={props.style}>
+          Here wil be series component
+        </SeriesDiv>
+
   )
 }
 

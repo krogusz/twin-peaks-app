@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Link, BrowserRouter as Router} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 const ItemWrapper = styled.p`
 position: absolute ;
@@ -52,12 +52,16 @@ filter: sepia(70%);
 backface-visibility: hidden;
 `
 const Item = (props) => {
-  const divStyle = {
-    borderLeft: `${props.first? 0 : 1}px rgba(255,255,255,.09) solid`
-  }
-  return(
+    const divStyle = {
+      borderLeft: `${props.first? 0 : 1}px rgba(255,255,255,.09) solid`
+    }
+    return(
       <MenuItemDiv style = {divStyle}>
-        <ItemLink to={props.name}>
+        <ItemLink 
+        to={props.name}
+        onClick = {props.onClick}
+
+        >
         <ItemWrapper >
           {props.name}
         </ItemWrapper> 
