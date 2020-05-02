@@ -8,5 +8,6 @@
 
 <div style = "margin:20px 40px 20px 40px">
 Website dedicated to Twin Peaks TV series.
-I'm using React and styled components.
+I'm using:
+React / styled components / react-spring.
 </div>

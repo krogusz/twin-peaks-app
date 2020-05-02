@@ -1,6 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
 const ItemWrapper = styled.p`
 position: absolute ;
@@ -15,26 +16,27 @@ letter-spacing: .2vw;
 font: 0.75rem NewBaskervilleExpOdC;
 opacity: .3;
 transition: all 1s ease;
-`
+`;
 
 const MenuItemDiv = styled.div`
 width:20%;
 height:100vh;
-display: inline-block;
+display: inline-block ;
 box-sizing: border-box;
 overflow: hidden;
-
 &:hover ${ItemWrapper}{
   font-size: 1rem;
   opacity: 1;
 }
-`
+`;
+
 const ItemLink = styled(Link)`
 position: relative;
 display: block;
 width:100%;
 height:100%;
-`
+`;
+
 const ItemImage = styled.div`
 background: url(${props => props.image.url});
 opacity:0;
@@ -50,25 +52,32 @@ background-size: cover;
 background-position: center;
 filter: sepia(70%);
 backface-visibility: hidden;
-`
+`;
+
 const Item = (props) => {
-    const divStyle = {
-      borderLeft: `${props.first? 0 : 1}px rgba(255,255,255,.09) solid`
-    }
-    return(
-      <MenuItemDiv style = {divStyle}>
-        <ItemLink 
+  const divStyle = {
+    borderLeft: `${props.first? 0 : 1}px rgba(255,255,255,.09) solid`
+  };
+  return(
+    <MenuItemDiv style = {divStyle}>
+      <ItemLink 
         to={props.name}
         onClick = {props.onClick}
-
-        >
+      >
         <ItemWrapper >
           {props.name}
         </ItemWrapper> 
         <ItemImage image = {{url: props.url}}></ItemImage>
-        </ItemLink>
-      </MenuItemDiv>
-  )
-}
+      </ItemLink>
+    </MenuItemDiv>
+  );
+};
+
+Item.propTypes = {
+  first: PropTypes.bool,
+  name: PropTypes.string,
+  onClick: PropTypes.func,
+  url: PropTypes.string
+};
 
 export default Item;

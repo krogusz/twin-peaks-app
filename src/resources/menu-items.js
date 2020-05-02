@@ -21,4 +21,4 @@ export default { "data":
       "img": "https://i.pinimg.com/originals/4e/ab/7b/4eab7beba7a5bc18734d03e55f958af4.png"
     }
   ]
-}
+};
