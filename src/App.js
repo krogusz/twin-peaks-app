@@ -2,6 +2,7 @@ import React from "react";
 import MainPage from "./components/main-page.jsx";
 import Series from "./components/series.jsx";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import {Spring} from "react-spring/renderprops";
 import styled from "styled-components";
 import Menu from "./components/menu.jsx";
 
@@ -45,14 +46,23 @@ class App extends React.Component {
     return(
       <div style = {{position: "relative"}}>
         <Router>
-          <MenuButtonDiv>
-            <button 
-              type = "button" 
-              onClick = {this.toogleMenu}
-            >
-              {this.state.menuDisabled ? "Menu" : <img src={arrow} alt = ""/>}
-            </button>
-          </MenuButtonDiv>         
+          <Spring 
+            config = {{tension:120, friction: 120, delay: 1300}}
+            from={{opacity: 0}}
+            to={{opacity: 0.3}}
+          >
+            {style => 
+              <MenuButtonDiv>
+                <button 
+                  type = "button" 
+                  onClick = {this.toogleMenu}
+                  style = {style}
+                >
+                  {this.state.menuDisabled ? "Menu" : <img src={arrow} alt = ""/>}
+                </button>
+              </MenuButtonDiv>
+            }
+          </Spring>
           <Route exact path = "/" > 
             <MainPage /> 
           </Route>

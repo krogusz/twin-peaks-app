@@ -56,7 +56,7 @@ backface-visibility: hidden;
 
 const Item = (props) => {
   const divStyle = {
-    borderLeft: `${props.first? 0 : 1}px rgba(255,255,255,.09) solid`
+    borderRight: `${props.first? 1 : 1}px rgba(255,255,255,.09) solid`
   };
   return(
     <MenuItemDiv style = {divStyle}>
