@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import {Spring} from "react-spring/renderprops";
 import styled from "styled-components";
 import Menu from "./components/menu.jsx";
+import Movie from "./components/movie.jsx";
+
 
 const arrow = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAmUlEQVRIie2UsQ3CMAAEnzRJwxigVAxDjdgpDTtkF6RkkxQZ4CiIEstyKLC/ghvgT37bL/0pBVADHXB0hJ+AgTdlBcAVmNgoIwCapZKYfAFwBsZEeL4AuAHzTvj3gg+VZHFYwltJvaRL1vETVMBd0tMRLkmVIzTEXtGK65JTIs8zjSS+jxZIfFMRiTxjF0l8cx1IGuBhE/wuL4q+v+UDi/jyAAAAAElFTkSuQmCC";
 
@@ -63,12 +65,9 @@ class App extends React.Component {
               </MenuButtonDiv>
             }
           </Spring>
-          <Route exact path = "/" > 
-            <MainPage /> 
-          </Route>
-          <Route path = "/series"> 
-            <Series /> 
-          </Route>
+          <Route exact path = "/" > <MainPage /> </Route>
+          <Route path = "/series"> <Series /> </Route>
+          <Route path = "/movie"> <Movie /> </Route>
           <Menu 
             disabled = {this.state.menuDisabled}
             onClick = {this.toogleMenu}
