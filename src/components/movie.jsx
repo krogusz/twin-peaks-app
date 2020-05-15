@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import {Spring} from "react-spring/renderprops";
 import moviePlot from "../resources/movie.js";
 import Item from "./movie-item.jsx";
@@ -30,7 +29,8 @@ position: absolute;
 top: 90%;
 left: 50%;
 transform: translate(-50%, -50%);
-`
+`;
+
 const Line = styled.span`
 flex-grow: 1;
 height: 1px;
@@ -47,24 +47,24 @@ position: relative;
   border-bottom: 10px solid transparent;
   border-left: 10px solid white;
 }
-`
-const Movie = (props) => {
-  console.log(moviePlot)
+`;
+
+const Movie = () => {
   return(
     <Scrollrapper>
       <MovieDiv >
-      <Spring
-        config = {{tension:120, friction: 120, delay: 1300}}
-        from={{opacity: 0}}
-        to={{opacity: 0.3}}
-      >
-        {style =>
-          <LineContainer >
-            <Line style = {style}/> 
-          </LineContainer>
-        }
-      </Spring>
-      {moviePlot["data"].map((event, i) => (
+        <Spring
+          config = {{tension:120, friction: 120, delay: 1300}}
+          from={{opacity: 0}}
+          to={{opacity: 0.3}}
+        >
+          {style =>
+            <LineContainer >
+              <Line style = {style}/> 
+            </LineContainer>
+          }
+        </Spring>
+        {moviePlot["data"].map((event, i) => (
           <Item 
             key = {i}
             top = {event["top"]}
@@ -73,10 +73,9 @@ const Movie = (props) => {
             plot = {event["plot"]}
             img = {event["img"]}
           />
-      ))}
+        ))}
       </MovieDiv>
     </Scrollrapper>
-    
   );
 };
 

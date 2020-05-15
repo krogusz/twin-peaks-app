@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import {Spring, Transition} from "react-spring/renderprops";
+import {Spring} from "react-spring/renderprops";
 
 const ItemTitleWrapper = styled.div`
 position: relative;
@@ -51,9 +51,9 @@ class Item extends React.Component {
   render(){
     return(
       <Spring
-          config = {{tension:120, friction: 120, delay: 2000}}
-          from={{top: "-100%"}}
-          to={{top: "9%"}}
+        config = {{tension:120, friction: 120, delay: 2000}}
+        from={{top: "-100%"}}
+        to={{top: "9%"}}
       >
         {style => 
           <ItemWrapper left={this.props.left} style = {style}>
@@ -66,8 +66,15 @@ class Item extends React.Component {
           </ItemWrapper>
         }
       </Spring>
-    )
+    );
   }
+}
+
+Item.propTypes = {
+  left: PropTypes.string,
+  name: PropTypes.string,
+  img: PropTypes.string,
+  plot: PropTypes.string,
 };
 
 export default Item;
