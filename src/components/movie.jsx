@@ -2,26 +2,35 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import {Spring} from "react-spring/renderprops";
+import moviePlot from "../resources/movie.js";
+import Item from "./movie-item.jsx";
+
+const Scrollrapper = styled.div`
+overflow-x: scroll;
+&::-webkit-scrollbar{
+  display: none;
+};
+overflow-y: hidden;
+`;
 
 const MovieDiv = styled.div`
 background-color: #282830;
-width: 100vw;
+width: 300%;
 height: 100vh;
 position: relative;
+display:flex;
 `;
-
 
 const LineContainer = styled.div`
 display: flex;
-width: 80%;
+width: 90%;
 height: 20px;
 align-items: center;
 position: absolute;
-top: 50%;
+top: 90%;
 left: 50%;
 transform: translate(-50%, -50%);
 `
-
 const Line = styled.span`
 flex-grow: 1;
 height: 1px;
@@ -39,10 +48,11 @@ position: relative;
   border-left: 10px solid white;
 }
 `
-
 const Movie = (props) => {
+  console.log(moviePlot)
   return(
-    <MovieDiv>
+    <Scrollrapper>
+      <MovieDiv >
       <Spring
         config = {{tension:120, friction: 120, delay: 1300}}
         from={{opacity: 0}}
@@ -54,10 +64,20 @@ const Movie = (props) => {
           </LineContainer>
         }
       </Spring>
-    </MovieDiv>
+      {moviePlot["data"].map((event, i) => (
+          <Item 
+            key = {i}
+            top = {event["top"]}
+            left = {`${i * 9 + 5}%`}
+            name = {event["name"]}
+            plot = {event["plot"]}
+            img = {event["img"]}
+          />
+      ))}
+      </MovieDiv>
+    </Scrollrapper>
+    
   );
 };
-
-
 
 export default Movie;
