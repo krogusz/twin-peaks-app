@@ -2,8 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import {Spring} from "react-spring/renderprops";
+import {Link} from "react-router-dom";
 
-const series = ["first season", "second season", "third season"];
+const series = ["first season", "second season"];
 
 const SeriesDiv = styled.div`
 background-color: #282830;
@@ -27,6 +28,10 @@ color: white;
 margin-top: 50px;
 `;
 
+const ItemLink = styled(Link)`
+text-decoration: none;
+`;
+
 const Series = (props) => {
   return(
     <SeriesDiv style ={props.style}>
@@ -38,7 +43,15 @@ const Series = (props) => {
             to={{ marginLeft: 0, opacity: 0.3}}
             key = {elem}
           >
-            {style => <SeasonTitleWrapper style = {style} >{elem}</SeasonTitleWrapper>}
+            {style => 
+              <ItemLink
+                to={`series/${i+1}`}
+              >
+                <SeasonTitleWrapper style = {style} >
+                  {elem}
+                </SeasonTitleWrapper>
+              </ItemLink>
+            }
           </Spring>
         ))}
       </SeriesSubDiv>

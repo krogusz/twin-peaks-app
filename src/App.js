@@ -6,6 +6,7 @@ import {Spring} from "react-spring/renderprops";
 import styled from "styled-components";
 import Menu from "./components/menu.jsx";
 import Movie from "./components/movie.jsx";
+import Season from "./components/season.jsx";
 
 const arrow = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAmUlEQVRIie2UsQ3CMAAEnzRJwxigVAxDjdgpDTtkF6RkkxQZ4CiIEstyKLC/ghvgT37bL/0pBVADHXB0hJ+AgTdlBcAVmNgoIwCapZKYfAFwBsZEeL4AuAHzTvj3gg+VZHFYwltJvaRL1vETVMBd0tMRLkmVIzTEXtGK65JTIs8zjSS+jxZIfFMRiTxjF0l8cx1IGuBhE/wuL4q+v+UDi/jyAAAAAElFTkSuQmCC";
 
@@ -65,7 +66,8 @@ class App extends React.Component {
             }
           </Spring>
           <Route exact path = "/" > <MainPage /> </Route>
-          <Route path = "/series"> <Series /> </Route>
+          <Route exact path = "/series"> <Series /> </Route>
+          <Route path = "/series/:id" render={(props) => <Season {...props} />}/> 
           <Route path = "/movie"> <Movie /> </Route>
           <Menu 
             disabled = {this.state.menuDisabled}

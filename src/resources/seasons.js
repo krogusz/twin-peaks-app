@@ -1,0 +1,171 @@
+export default {
+  "season1":
+    [
+      {
+        "name": "Laura Palmer id dead",
+        "img": "https://i.pinimg.com/originals/8e/5c/12/8e5c1270e409963bc3ff047a16dd4a54.jpg",
+        "plot": "On the morning of February 24, in the town of Twin Peaks, Washington, logger Pete Martell discovers a naked corpse tightly wrapped in a sheet of clear plastic on the bank of a river. Following the arrival of Sheriff Harry S. Truman, his deputies, and Dr. Hayward on the scene, the body is discovered to be that of homecoming queen Laura Palmer, a figurehead of youthful innocence and purity in the Twin Peaks community. The news of her death spreads rapidly among the town's residents, particularly Laura's family and friends. "
+      },
+      {
+        "name": "There is another girl",
+        "img": "https://2.bp.blogspot.com/-qEbCyYfz6fw/WM6ukRUAZbI/AAAAAAAAkyc/ansi6f4tpToL17j44qyJQOceRvo24XWZACLcB/s640/Picture%2B27.png",
+        "plot": "Meanwhile, just across the state line, a second girl, Ronette Pulaski, is found walking along the railroad tracks in a fugue state. Because Ronette was discovered across the state line, FBI Special Agent Dale Cooper is called in to investigate. Cooper's initial examination of Laura's body reveals a tiny typed letter 'R' inserted under her fingernail. At a town hall meeting that night, Cooper informs the community that Laura's death matches the M.O. of a killer who murdered Teresa Banks, another girl in Southwestern Washington the previous year, and that evidence indicates the killer lives in Twin Peaks."
+      },
+      {
+        "name": "Double life of Laura ",
+        "img": "https://4.bp.blogspot.com/-sWTkGOfevTE/VLPXD3ge0NI/AAAAAAAAc2Q/2H6SdGc4oOU/s1600/Picture%2B27.png",
+        "plot": "Cooper's investigation quickly reveals that Laura was living a double life. She was cheating on her boyfriend, football captain Bobby Briggs, with biker James Hurley and prostituting herself out with the help of Leo Johnson, a local truck driver, and Jacques Renault, a pimp and drug dealer. Further, Laura was addicted to cocaine, which she obtained by emotionally blackmailing Bobby into doing business with Jacques."
+      },
+      {
+        "name": "First consequences of Laura's death",
+        "img": "https://i.pinimg.com/564x/c5/dd/ca/c5ddca9409c609ac103e323785cbf30f.jpg",
+        "plot": "Laura's death sets off a chain reaction of events around town. Laura's father, Leland Palmer, a prominent attorney, suffers a nervous breakdown. Her best friend, Donna Hayward, begins a relationship with James Hurley and, with the help of Laura's cousin, Maddy Ferguson, sets about investigating Laura's psychiatrist, Dr. Lawrence Jacoby, whom they discover was obsessed with Laura. He is revealed to be innocent, and a plan to break into his apartment ends with Jacoby being attacked in a park and hospitalized with no memory of the event except the smell of burning oil."
+      },
+      {
+        "name": "Horne family",
+        "img": "https://i.pinimg.com/originals/0d/9f/c9/0d9fc9d90368aa7cfb8be78b425f037e.jpg",
+        "plot":"Benjamin Horne, the richest man in Twin Peaks, sets about the final phase of his plan to destroy the town's lumber mill and murder Catherine Martell, who runs it, so that he can purchase the land at a reduced price and cement his position as the town's undisputed economic power. His increasing neglect of his sultry, troubled daughter, Audrey Horne, leads to her falling in love with Cooper, for whom she begins spying around town in an effort to gain his affections by helping him solve Laura's murder."
+      },
+      {
+        "name": "Surreal dream of Cooper",
+        "img": "https://25yearslatersite.com/wp-content/uploads/2017/09/img_9976.jpg",
+        "plot":"His second night in town, Cooper has a surreal dream in which he is approached in the basement of the Twin Peaks hospital by a one-armed man who calls himself Mike. Mike identifies himself as an otherworldly being, and then tells Cooper that Laura's murderer is BOB, another entity like himself. Cooper then sees BOB, a feral, gray-haired man in denim who vows to keep killing. Cooper then sees himself twenty-five years older, sitting stationary in a room surrounded by red curtains which emit an otherworldly light. Across from him are a dwarf in a red business suit (The Man from Another Place), and Laura Palmer, whom The Man identifies as his cousin. After engaging in an apparently coded dialogue with Cooper, the Man rises from his chair and dances around the room while Laura whispers something in Cooper's ear. The next morning, Cooper convenes with Truman and recalls the dream, telling him that it was symbolic, and that if he can decipher the symbols, he will know who killed Laura."
+      },
+      {
+        "name": "Investigation of Jacques Renault",
+        "img": "https://www.wprost.pl/_thumb/54/ea/a645d60a9df0c15a78f1c14d9e02.jpeg",
+        "plot":"Cooper and the Twin Peaks Sheriff's department track down the one-armed man from Cooper's dream, who turns out to be a traveling salesman named Philip Gerard. Cooper questions Gerard about his associates, and discovers that he does indeed know a Bob, who is revealed to be the vet that treats Jacques Renault's pet bird Waldo. Cooper takes this series of events to mean that Renault is the murderer and, with Truman's help, he tracks Renault down to a brothel owned by Ben Horne. Cooper confronts him there, and tricks Renault into meeting him on U.S. soil at the water treatment plant. Shot during his arrest at the plant, Renault is hospitalized. "
+      },
+      {
+        "name": "Terrible night in Twin Peaks",
+        "img": "https://www.nerdist.com/wp-content/uploads/2015/03/twinpeaks-leoshot.jpg",
+        "plot":"Leland Palmer, after learning that Renault has been arrested, sneaks into the hospital and murders him. The same night, Ben Horne orders Leo to burn down the town mill with Catherine trapped inside; afterward, Ben has Leo gunned down by a hitman to ensure he won't talk. Returning to his room following Jacques' arrest, Cooper is shot by a masked gunman, ending the season on a cliffhanger"
+      }
+    ],
+  "season2":
+    [
+      {
+        "name": "Vision of shot Cooper",
+        "img": "https://nerdist.com/wp-content/uploads/2015/03/twin_peaks_s2e1_may_the_giant_be_with_you.jpg",
+        "plot": "Cooper is shot, left lying in the room. In his injured and semi-lucid state, Cooper experiences a vision in which a Giant appears to him. The Giant reveals three things to Agent Cooper: \"there is a man in a smiling bag\", \"the owls are not what they seem\", and \"without chemicals, he points\", finally telling him \"you will require medical attention.\" The Giant then takes Cooper's gold ring, explaining that when the three premonitions are understood by Cooper, his ring will be returned."
+      },
+      {
+        "name": "Consequences of this terrible night",
+        "img": "https://vignette.wikia.nocookie.net/twinpeaks/images/b/b5/MrTojamura.jpg/revision/latest?cb=20160516050709",
+        "plot": "Meanwhile, Leo Johnson undergoes surgery, having survived his shooting rendered severely incapacitated. Catherine Martell survives the fire but uses the opportunity to fake her own death in order to plot revenge on Ben Horne. Leland Palmer, whose hair has turned white overnight, returns to work after Renault's death, rejuvenated by Renault's murder."
+      },
+      {
+        "name": "New suspect ",
+        "img": "https://www.wprost.pl/_thumb/5e/47/30fc5674205e516904c5f7b362e7.jpeg",
+        "plot": "Cooper learns that Phillip Gerard is the host to Mike, who turns out to be a demonic \"inhabiting spirit\" who used to retain the services of BOB, a lesser demonic entity, to help him kill humans. Mike reveals that BOB has been possessing someone in town for decades, although he neglects to tell Cooper who. The discovery of another diary that Laura kept, taken by Donna and Maddy from Harold Smith, reveals that BOB, a \"friend of her father's\", began sexually molesting and raping her as a child, and that she delved into drugs as a means to cope with the abuse. Cooper begins looking at Leland's friends and associates before telling Harry that he believes the killer is Ben Horne."
+      },
+      {
+        "name": "Next victim of BOB",
+        "img": "https://pbs.twimg.com/media/DXAKHc0XUAAyaAz.jpg",
+        "plot": "Confronted, Horne confesses to Cooper and Audrey that he was having an affair with Laura, but that he wouldn't kill her because he was in love with her. Shortly thereafter, Maddy Ferguson is found dead and wrapped in plastic with fur from a stuffed animal in Ben's office stuck to her body. Arrested for Laura's murder, Ben is visited in jail by Catherine, who mocks him with the knowledge that she and Ben were together the night of Laura's murder, and that if she chooses she can exonerate him."
+      },
+      {
+        "name": "We have the killer!",
+        "img": "https://i.pinimg.com/originals/0d/9f/c9/0d9fc9d90368aa7cfb8be78b425f037e.jpg",
+        "plot":"Worried by holes in the case, Cooper gathers together all of his suspects—including several red herrings, convinced that he will receive a sign to help him identify the killer. When offering Leland Palmer a piece of gum, a spirit which appeared to Cooper just after the shooting but before the appearance of the Giant utters a phrase Cooper heard the Man From Another Place say in his dream; the Giant appears to Cooper, confirming that Leland is BOB's host and the killer of Laura and Maddy. Cooper and Truman apprehend him, after which BOB assumes total control over Leland's body and confesses to a series of murders before forcing Leland to commit suicide. Dying in Cooper's arms, Leland, free of BOB's influence, tells Cooper that BOB has possessed him ever since molesting him as a child. He begs for forgiveness before seeing a vision of Laura welcoming him into the afterlife."
+      },
+      {
+        "name": "This may not be the end",
+        "img": "https://40.media.tumblr.com/9ba6de8eee1ec7ce9dc5e0fd005b9e2b/tumblr_nnncdrURhZ1uohw9ko1_1280.jpg",
+        "plot":"The next morning, Cooper, Truman, and other law enforcement personnel question whether Leland was truly possessed or mentally ill. The men all express worry that the former may be true and, if so, that it means BOB might still be stalking the community of Twin Peaks, looking for a new host."
+      },
+      {
+        "name": "Problem with another Renault brother",
+        "img": "https://vignette.wikia.nocookie.net/twinpeaks/images/1/16/Jean_Renault.jpg/revision/latest?cb=20111030055804",
+        "plot":"With the murder investigation concluded, Cooper is set to leave Twin Peaks when he is framed for drug trafficking by the criminal Jean Renault and temporarily suspended from the FBI. Renault holds Cooper responsible for the death of his brother Jacques, who was murdered by Leland Palmer while Renault was in police custody at the hospital."
+      },
+      {
+        "name": "Windom Earl is comming",
+        "img": "https://i.pinimg.com/originals/69/95/0f/69950f81aee37c3f2403351aab507e2a.png",
+        "plot":"After Renault is killed in a shootout with police and Cooper is cleared of all charges, his former FBI partner and mentor Windom Earle comes to Twin Peaks to play a deadly game of chess with Cooper, in which each piece of Cooper's that he takes means someone dies. As Cooper explains to Truman, during his early years with the FBI alongside Earle, Cooper had begun an affair with Earle's wife, Caroline, while she had been under his protection as a witness to a federal crime. Earle went mad and killed Caroline, tried to cut Cooper with a knife, and was subsequently committed to a mental institution. Now having escaped and come to Twin Peaks, Earle hides out in the woods so that he may go about plotting his revenge scheme."
+      },
+      {
+        "name": "White and Black Lodge",
+        "img": "https://vrijplaatsleiden.nl/wp-content/uploads/2017/07/twin_peaks.jpg",
+        "plot":"As this is going on, Cooper continues to try to track down the origins and whereabouts of BOB and learns more about the mysteries of the dark woods surrounding Twin Peaks. It is here he learns of the existence of the White Lodge and the Black Lodge, two mystical, extra-dimensional realms analogous to Heaven and Hell whose gateways reside somewhere in the woods. Cooper learns that BOB, The Giant, and the Man From Another Place all come from one of the two lodges."
+      },
+      {
+        "name": "Anna has been kidnapped",
+        "img": "https://2.bp.blogspot.com/-Z60ycmKpT9g/WOMiVqntZlI/AAAAAAAAlg8/Xou4h7YPePcjHmwIRzqcwbYnRtogi7PpwCLcB/s1600/Picture%2B45.png",
+        "plot":"Cooper also falls in love with a new girl in town, Annie Blackburn. When Annie wins the Miss Twin Peaks contest, Windom Earle kidnaps her and takes her to the Black Lodge entrance in Glastonbury Grove. Cooper realizes that Earle's real reason for being in Twin Peaks is to gain entrance into the Black Lodge and harness its power for himself, and that his \"chess game\" has been an elaborate decoy."
+      },
+      {
+        "name": "Confrontation with Windsom Earld",
+        "img": "https://vignette.wikia.nocookie.net/twinpeaks/images/d/d6/Windomdies.jpg/revision/latest?cb=20100913182724",
+        "plot":"With the help of the Log Lady, Cooper follows Annie and Earle into the Lodge, which turns out to be the red-curtained room from his dream. He is greeted by the Man From Another Place, the Giant, and the spirit of Laura Palmer, who each give Cooper encoded prophecies about his future and demonstrate the properties of the Black Lodge, which defy the laws of time and space. Searching for Annie and Earle, Cooper encounters doppelgangers of various dead people, including Maddy and Leland Palmer, who taunt him with strange, false statements. The doppelgangers eventually lead Cooper to Earle, who demands that Cooper give up his soul in exchange for Annie's life. Cooper agrees and Earle kills him. Seconds later, Killer BOB appears and reverses time in the Lodge, bringing Cooper back to life. BOB tells Earle that he cannot take human souls and then kills Earle and takes his soul."
+      },
+      {
+        "name": "How is Annie",
+        "img": "https://i.pinimg.com/originals/08/02/67/080267a683e4461611a9def8e2333d63.jpg",
+        "plot":"BOB then turns on Cooper, who for the first time in the Lodge experiences fear. Cooper flees, pursued by BOB and a doppelganger of himself.Days after entering the Lodge, Cooper and Annie are discovered in the woods by Sheriff Truman. Annie is hospitalized, but Cooper's injuries are minor enough that Doctor Hayward is able to treat them in Cooper's room at the Great Northern Hotel. Upon waking, Cooper asks about Annie's condition, and then weirdly states he needs to brush his teeth. When Cooper enters the bathroom and looks into the mirror, his reflection reveals that he is now inhabited by BOB. He then rams his face into the mirror and while laughing, rhetorically continues asking about Annie."
+      }
+    ],
+  "season3":
+    [
+      {
+        "name": "Vision of shot Cooper",
+        "img": "https://nerdist.com/wp-content/uploads/2015/03/twin_peaks_s2e1_may_the_giant_be_with_you.jpg",
+        "plot": "Cooper is shot, left lying in the room. In his injured and semi-lucid state, Cooper experiences a vision in which a Giant appears to him. The Giant reveals three things to Agent Cooper: \"there is a man in a smiling bag\", \"the owls are not what they seem\", and \"without chemicals, he points\", finally telling him \"you will require medical attention.\" The Giant then takes Cooper's gold ring, explaining that when the three premonitions are understood by Cooper, his ring will be returned."
+      },
+      {
+        "name": "Consequences of this terrible night",
+        "img": "https://vignette.wikia.nocookie.net/twinpeaks/images/b/b5/MrTojamura.jpg/revision/latest?cb=20160516050709",
+        "plot": "Meanwhile, Leo Johnson undergoes surgery, having survived his shooting rendered severely incapacitated. Catherine Martell survives the fire but uses the opportunity to fake her own death in order to plot revenge on Ben Horne. Leland Palmer, whose hair has turned white overnight, returns to work after Renault's death, rejuvenated by Renault's murder."
+      },
+      {
+        "name": "New suspect ",
+        "img": "https://www.wprost.pl/_thumb/5e/47/30fc5674205e516904c5f7b362e7.jpeg",
+        "plot": "Cooper learns that Phillip Gerard is the host to Mike, who turns out to be a demonic \"inhabiting spirit\" who used to retain the services of BOB, a lesser demonic entity, to help him kill humans. Mike reveals that BOB has been possessing someone in town for decades, although he neglects to tell Cooper who. The discovery of another diary that Laura kept, taken by Donna and Maddy from Harold Smith, reveals that BOB, a \"friend of her father's\", began sexually molesting and raping her as a child, and that she delved into drugs as a means to cope with the abuse. Cooper begins looking at Leland's friends and associates before telling Harry that he believes the killer is Ben Horne."
+      },
+      {
+        "name": "Next victim of BOB",
+        "img": "https://pbs.twimg.com/media/DXAKHc0XUAAyaAz.jpg",
+        "plot": "Confronted, Horne confesses to Cooper and Audrey that he was having an affair with Laura, but that he wouldn't kill her because he was in love with her. Shortly thereafter, Maddy Ferguson is found dead and wrapped in plastic with fur from a stuffed animal in Ben's office stuck to her body. Arrested for Laura's murder, Ben is visited in jail by Catherine, who mocks him with the knowledge that she and Ben were together the night of Laura's murder, and that if she chooses she can exonerate him."
+      },
+      {
+        "name": "We have the killer!",
+        "img": "https://i.pinimg.com/originals/0d/9f/c9/0d9fc9d90368aa7cfb8be78b425f037e.jpg",
+        "plot":"Worried by holes in the case, Cooper gathers together all of his suspects—including several red herrings, convinced that he will receive a sign to help him identify the killer. When offering Leland Palmer a piece of gum, a spirit which appeared to Cooper just after the shooting but before the appearance of the Giant utters a phrase Cooper heard the Man From Another Place say in his dream; the Giant appears to Cooper, confirming that Leland is BOB's host and the killer of Laura and Maddy. Cooper and Truman apprehend him, after which BOB assumes total control over Leland's body and confesses to a series of murders before forcing Leland to commit suicide. Dying in Cooper's arms, Leland, free of BOB's influence, tells Cooper that BOB has possessed him ever since molesting him as a child. He begs for forgiveness before seeing a vision of Laura welcoming him into the afterlife."
+      },
+      {
+        "name": "This may not be the end",
+        "img": "https://40.media.tumblr.com/9ba6de8eee1ec7ce9dc5e0fd005b9e2b/tumblr_nnncdrURhZ1uohw9ko1_1280.jpg",
+        "plot":"The next morning, Cooper, Truman, and other law enforcement personnel question whether Leland was truly possessed or mentally ill. The men all express worry that the former may be true and, if so, that it means BOB might still be stalking the community of Twin Peaks, looking for a new host."
+      },
+      {
+        "name": "Problem with another Renault brother",
+        "img": "https://vignette.wikia.nocookie.net/twinpeaks/images/1/16/Jean_Renault.jpg/revision/latest?cb=20111030055804",
+        "plot":"With the murder investigation concluded, Cooper is set to leave Twin Peaks when he is framed for drug trafficking by the criminal Jean Renault and temporarily suspended from the FBI. Renault holds Cooper responsible for the death of his brother Jacques, who was murdered by Leland Palmer while Renault was in police custody at the hospital."
+      },
+      {
+        "name": "Windom Earl is comming",
+        "img": "https://i.pinimg.com/originals/69/95/0f/69950f81aee37c3f2403351aab507e2a.png",
+        "plot":"After Renault is killed in a shootout with police and Cooper is cleared of all charges, his former FBI partner and mentor Windom Earle comes to Twin Peaks to play a deadly game of chess with Cooper, in which each piece of Cooper's that he takes means someone dies. As Cooper explains to Truman, during his early years with the FBI alongside Earle, Cooper had begun an affair with Earle's wife, Caroline, while she had been under his protection as a witness to a federal crime. Earle went mad and killed Caroline, tried to cut Cooper with a knife, and was subsequently committed to a mental institution. Now having escaped and come to Twin Peaks, Earle hides out in the woods so that he may go about plotting his revenge scheme."
+      },
+      {
+        "name": "White and Black Lodge",
+        "img": "https://vrijplaatsleiden.nl/wp-content/uploads/2017/07/twin_peaks.jpg",
+        "plot":"As this is going on, Cooper continues to try to track down the origins and whereabouts of BOB and learns more about the mysteries of the dark woods surrounding Twin Peaks. It is here he learns of the existence of the White Lodge and the Black Lodge, two mystical, extra-dimensional realms analogous to Heaven and Hell whose gateways reside somewhere in the woods. Cooper learns that BOB, The Giant, and the Man From Another Place all come from one of the two lodges."
+      },
+      {
+        "name": "Anna has been kidnapped",
+        "img": "https://2.bp.blogspot.com/-Z60ycmKpT9g/WOMiVqntZlI/AAAAAAAAlg8/Xou4h7YPePcjHmwIRzqcwbYnRtogi7PpwCLcB/s1600/Picture%2B45.png",
+        "plot":"Cooper also falls in love with a new girl in town, Annie Blackburn. When Annie wins the Miss Twin Peaks contest, Windom Earle kidnaps her and takes her to the Black Lodge entrance in Glastonbury Grove. Cooper realizes that Earle's real reason for being in Twin Peaks is to gain entrance into the Black Lodge and harness its power for himself, and that his \"chess game\" has been an elaborate decoy."
+      },
+      {
+        "name": "Confrontation with Windsom Earld",
+        "img": "https://vignette.wikia.nocookie.net/twinpeaks/images/d/d6/Windomdies.jpg/revision/latest?cb=20100913182724",
+        "plot":"With the help of the Log Lady, Cooper follows Annie and Earle into the Lodge, which turns out to be the red-curtained room from his dream. He is greeted by the Man From Another Place, the Giant, and the spirit of Laura Palmer, who each give Cooper encoded prophecies about his future and demonstrate the properties of the Black Lodge, which defy the laws of time and space. Searching for Annie and Earle, Cooper encounters doppelgangers of various dead people, including Maddy and Leland Palmer, who taunt him with strange, false statements. The doppelgangers eventually lead Cooper to Earle, who demands that Cooper give up his soul in exchange for Annie's life. Cooper agrees and Earle kills him. Seconds later, Killer BOB appears and reverses time in the Lodge, bringing Cooper back to life. BOB tells Earle that he cannot take human souls and then kills Earle and takes his soul."
+      },
+      {
+        "name": "How is Annie",
+        "img": "https://i.pinimg.com/originals/08/02/67/080267a683e4461611a9def8e2333d63.jpg",
+        "plot":"BOB then turns on Cooper, who for the first time in the Lodge experiences fear. Cooper flees, pursued by BOB and a doppelganger of himself.Days after entering the Lodge, Cooper and Annie are discovered in the woods by Sheriff Truman. Annie is hospitalized, but Cooper's injuries are minor enough that Doctor Hayward is able to treat them in Cooper's room at the Great Northern Hotel. Upon waking, Cooper asks about Annie's condition, and then weirdly states he needs to brush his teeth. When Cooper enters the bathroom and looks into the mirror, his reflection reveals that he is now inhabited by BOB. He then rams his face into the mirror and while laughing, rhetorically continues asking about Annie."
+      }
+    ]
+};
