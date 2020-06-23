@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import Card from "./season-card.jsx";
 import {Transition} from "react-spring/renderprops";
-import seasonPlot from "../resources/seasons.js";
+// import seasonPlot from "../resources/seasons.js";
 
 const Container = styled.div`
 width:100vw;
@@ -53,7 +53,7 @@ class Season extends React.Component{
       index: 0,
       dir: 0
     };
-    this.data = seasonPlot[`season${props.match.params.id}`];
+    this.data = typeof props.match.params.id === "undefined" ? props.plot[`data`]: props.plot[`season${props.match.params.id}`];
     this.length = this.data.length;
     this.navRef = React.createRef();
   }
@@ -85,7 +85,6 @@ class Season extends React.Component{
     return(
       <Container>
         <CardWrapper>
-
           <Transition
             items={this.data[this.state.index]} 
             keys={this.state.index}
