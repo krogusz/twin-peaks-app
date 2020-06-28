@@ -6,7 +6,7 @@ import {Spring} from "react-spring/renderprops";
 import styled from "styled-components";
 import Menu from "./components/menu.jsx";
 import Movie from "./components/movie.jsx";
-import Season from "./components/season.jsx";
+import Plot from "./components/plot.jsx";
 import Character from "./components/characters.jsx";
 import seasonPlot from "./resources/seasons.js";
 import moviePlot from "./resources/movie.js";
@@ -72,8 +72,8 @@ class App extends React.Component {
           </Spring>
           <Route exact path = "/" > <MainPage /> </Route>
           <Route exact path = "/series"> <Series /> </Route>
-          <Route path = "/series/:id" render={(props) => <Season {...props} plot = {seasonPlot} />}/> 
-          <Route path = "/movie" render={(props) => <Season {...props} plot = {moviePlot} />}/>
+          <Route path = "/series/:id" render={(props) => <Plot {...props} plot = {seasonPlot} />}/> 
+          <Route path = "/movie" render={(props) => <Plot {...props} plot = {moviePlot} />}/>
           <Route path = "/characters"> <Character /> </Route>
           <Menu 
             disabled = {this.state.menuDisabled}

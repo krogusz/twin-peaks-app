@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import Card from "./season-card.jsx";
+import {Navigation} from "./plot-nav.jsx";
 import {Transition} from "react-spring/renderprops";
 // import seasonPlot from "../resources/seasons.js";
 
@@ -20,25 +21,7 @@ width: 900px;
 height:600px;
 text-align: center;
 `;
-const NavButton = styled.div`
-background: #c6c6c6;
-border-radius: 50%;
-width: 30px;
-height: 30px;
-margin: 15px;
-justify-content: center;
-border: 2px solid rgb(230, 230, 230);
-cursor: pointer;
-display: flex;
-align-items: center;
-`;
-const Navigation = styled.div`
-display: flex;
-position: absolute;
-bottom: 0px;
-left:50%;
-transform: translateX(-50%);
-`;
+
 const TransitionWrapper = styled.div`
 position: absolute;
 top:0;
@@ -46,7 +29,7 @@ left:0;
 width: 900px;
 `;
 
-class Season extends React.Component{
+class Plot extends React.Component{
   constructor(props){
     super(props);
     this.state = {
@@ -55,7 +38,6 @@ class Season extends React.Component{
     };
     this.data = typeof props.match.params.id === "undefined" ? props.plot[`data`]: props.plot[`season${props.match.params.id}`];
     this.length = this.data.length;
-    this.navRef = React.createRef();
   }
 
   changeCard = (e) => {
@@ -93,51 +75,16 @@ class Season extends React.Component{
             leave={{ opacity: 0, transform: `translate3d(${this.state.dir === 1 ? -75 : 75}%,0,0) scale(0.5)`}}>
             {items => props => <TransitionWrapper style={props}><Card image = {items.img} title={items.name} plot={items.plot}/></TransitionWrapper>}
           </Transition>
+          <Navigation changeCard = {this.changeCard} indexes = {Array.from(Array(this.length).keys())} />
 
-          <Navigation>
-            <NavButton onClick = {() => this.changeCard(-1)}> 
-              <svg
-                xmlns = "http://www.w3.org/2000/svg"
-                width = "30"
-                height = "30"
-                viewBox =  "0 0 24 24"
-                fill = "none"
-                stroke = "currentColor"
-                strokeWidth = "2"
-                strokeLinecap = "round"
-                strokeLinejoin = "round"
-              >
-                <polyline points = "15 18 9 12 15 6"></polyline>
-              </svg>
-            </NavButton>
-
-            {Array.from(Array(this.length).keys()).map( (i, key) =>(
-              <NavButton key = {key} onClick = {this.changeCard} ref = {this.navRef}>{i}</NavButton>
-            ))}
-
-            <NavButton onClick = {() => this.changeCard(1)}> 
-              <svg
-                xmlns = "http://www.w3.org/2000/svg"
-                width = "30"
-                height = "30"
-                viewBox =  "0 0 20 24"
-                fill = "none"
-                stroke = "currentColor"
-                strokeWidth = "2"
-                strokeLinecap = "round"
-                strokeLinejoin = "round"
-              >
-                <polyline points = "9 18 15 12 9 6"></polyline>
-              </svg>
-            </NavButton>
-          </Navigation>
+          
         </CardWrapper>
       </Container>
     );
   }
 }
 
-Season.propTypes = {
+Plot.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
       id: PropTypes.number
@@ -145,4 +92,4 @@ Season.propTypes = {
   }),
 };
 
-export default Season;
+export default Plot;
