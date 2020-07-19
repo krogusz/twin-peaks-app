@@ -23,9 +23,7 @@ display: flex;
 align-items: center;
 `;
 
-
 const Array = (props) => {
-  console.log("iugywuydw", props)
   return(
     <svg
       xmlns = "http://www.w3.org/2000/svg"
@@ -40,27 +38,37 @@ const Array = (props) => {
     >
       <polyline points = {props.points}></polyline>
     </svg>
-  )
-}
+  );
+};
 
 const Navigation  = (props) => {
-return(          
-  <NavigationContainer>
-    <NavButton onClick = {() => props.changeCard(-1)}> 
-      <Array viewBox = "0 0 24 24" points= "15 18 9 12 15 6">
-      </Array>
-    </NavButton>
+  return(          
+    <NavigationContainer>
+      <NavButton onClick = {() => props.changeCard(-1)}> 
+        <Array viewBox = "0 0 24 24" points= "15 18 9 12 15 6">
+        </Array>
+      </NavButton>
 
-    {props.indexes.map( (i, key) =>(
-      <NavButton key = {key} onClick = {props.changeCard}>{i}</NavButton>
-    ))}
+      {props.indexes.map( (i, key) =>(
+        <NavButton key = {key} onClick = {props.changeCard}>{i}</NavButton>
+      ))}
 
-    <NavButton onClick = {() => props.changeCard(1)}> 
-      <Array viewBox = "0 0 20 24" points = "9 18 15 12 9 6" >
-      </Array>
-    </NavButton>
-  </NavigationContainer>
-  )
-}
+      <NavButton onClick = {() => props.changeCard(1)}> 
+        <Array viewBox = "0 0 20 24" points = "9 18 15 12 9 6" >
+        </Array>
+      </NavButton>
+    </NavigationContainer>
+  );
+};
+
+Array.propTypes = {
+  viewBox: PropTypes.string,
+  points: PropTypes.string
+};
+
+Navigation.propTypes = {
+  changeCard: PropTypes.func,
+  indexes: PropTypes.array
+}; 
 
 export  {Navigation};

@@ -1,0 +1,11 @@
+export default { "facts":
+  [
+    "Twin Peaks takes place in Washington State, but before Lynch and Frost settled on the Pacific Northwest, they considered the Heartland. “The original title for the show was North Dakota”. Frost said in an interview with Inside Twin Peaks. “We were playing with this idea of the plains, a place far away from the world. But what we really lacked was that sense of mystery in the forest, and the darkness that moving it a little further west had.”",
+
+    "Sheryl Lee, who played both Laura Palmer and her look-alike cousin Maddy Ferguson, was initially hired for a wordless cameo. As Lynch explained in Lynch on Lynch, the plan was to cast a local girl in Seattle, dye her skin gray, and simply use her for the scene where Laura’s body washes up on shore. But once they gave Lee another small scene—a picnic with Donna (Lara Flynn Boyle)—Lynch was impressed with her acting ability, and gave her regular series work as Maddy.",
+
+    "Another actor who was only meant to appear in the pilot? The one-armed man. “Mike” was only required to walk out of an elevator in the original script. All Lynch and Frost wanted was a quick, intriguing “Fugitive homage.” But Lynch was also a fan of actor Al Strobel, so he wrote him into the series's larger mythology.",
+    "Frank Silva portrayed the terrifying specter Bob, but he didn’t get the role through traditional means. Silva was already serving as the show’s set decorator when Lynch got an idea. He had noticed Silva moving furniture around Laura Palmer’s bedroom and asked if he would crouch down by her bed. They shot Silva down there, staring directly at the camera. Lynch wasn’t sure how he was going to use that footage, until he discovered that Silva had also accidentally shown up in a mirror during Sarah Palmer’s tormented visions. With that, Bob was officially born.",
+    "The “Red Roo” sequences were notable for several reasons—the dancing Man from Another Place, alive Laura Palmer, old Dale Cooper—but the bizarre way everyone spoke made the biggest impression. This wasn’t achieved through a simple distortion trick. The actors had to learn and recite all their lines backwards. Then, those lines were played backwards, making them “correct” again. Michael J. Anderson, who played The Man from Another Place, gave a quick demo on the DVDs."
+  ]
+};

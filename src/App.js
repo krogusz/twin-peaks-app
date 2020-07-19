@@ -5,14 +5,11 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import {Spring} from "react-spring/renderprops";
 import styled from "styled-components";
 import Menu from "./components/menu.jsx";
-import Movie from "./components/movie.jsx";
 import Plot from "./components/plot.jsx";
 import Character from "./components/characters.jsx";
+import Facts from "./components/facts.jsx";
 import seasonPlot from "./resources/seasons.js";
 import moviePlot from "./resources/movie.js";
-
-
-
 const arrow = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAmUlEQVRIie2UsQ3CMAAEnzRJwxigVAxDjdgpDTtkF6RkkxQZ4CiIEstyKLC/ghvgT37bL/0pBVADHXB0hJ+AgTdlBcAVmNgoIwCapZKYfAFwBsZEeL4AuAHzTvj3gg+VZHFYwltJvaRL1vETVMBd0tMRLkmVIzTEXtGK65JTIs8zjSS+jxZIfFMRiTxjF0l8cx1IGuBhE/wuL4q+v+UDi/jyAAAAAElFTkSuQmCC";
 
 const MenuButtonDiv = styled.div`
@@ -75,6 +72,7 @@ class App extends React.Component {
           <Route path = "/series/:id" render={(props) => <Plot {...props} plot = {seasonPlot} />}/> 
           <Route path = "/movie" render={(props) => <Plot {...props} plot = {moviePlot} />}/>
           <Route path = "/characters"> <Character /> </Route>
+          <Route path = "/interesting facts"> <Facts /> </Route>
           <Menu 
             disabled = {this.state.menuDisabled}
             onClick = {this.toogleMenu}
