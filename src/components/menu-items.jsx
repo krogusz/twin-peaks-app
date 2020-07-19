@@ -19,7 +19,7 @@ transition: all 1s ease;
 `;
 
 const MenuItemDiv = styled.div`
-width:20%;
+width:25%;
 height:100vh;
 display: inline-block ;
 box-sizing: border-box;
