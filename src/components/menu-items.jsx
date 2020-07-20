@@ -61,7 +61,7 @@ const Item = (props) => {
   return(
     <MenuItemDiv style = {divStyle}>
       <ItemLink 
-        to={props.name}
+        to = {`/${props.name}`}
         onClick = {props.onClick}
       >
         <ItemWrapper >
