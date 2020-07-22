@@ -1,112 +1,69 @@
 import React from "react";
-import styled from "styled-components";
-import {Transition} from "react-spring/renderprops";
-import PropTypes from "prop-types";
+import styled, {keyframes} from "styled-components";
 import dataChar from "../resources/characters.js";
 
+const rotate = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 const CharacterDiv = styled.div`
 background-color: #282830;
 width: 100%;
-height: 100vh;
-position: relative;
 `;
-
-const ButtonsContainer = styled.div`
+const GridComponent = styled.div`
+padding: 250px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;
+animation: ${rotate} 2s linear;
+`;
+const GridItem = styled.div`
+height: 500px;
+transition: transform 0.6s;
+transform-style: preserve-3d;
+position: relative;
+transform: ${props => props.clicked ? "rotateY(180deg)" : ""};
+`;
+const GridItemFront = styled.div`
+background: url(${props => props.image})  center;
+width: 100%;
+height: 100%;
 position: absolute;
-bottom: 20px;
+backface-visibility: hidden;
+`;
+const GridItemFrontCover = styled.div`
 width:100%;
-text-align: center;
+height:100%;
+background: RGBA(174, 162, 162, 0.4);
+margin:0;
 `;
-const Button = styled.button`
-width: 220px;
-height: 50px;
-border: 6px solid #1f1f24;
-
-background: linear-gradient(to left, RGBA(256,256,256,0) 50%, RGBA(256,256,256,0.5) 50%);
-background-size: 200% 100%;
-background-position:right bottom;
-
-border-radius: 50px;
-outline:none;
-color: #1f1f24;
-font: 20px bold;
-margin:20px;
-
-transition:all 2s ease;
-&:hover{
-  background-position: left bottom;
-  transform: scale(1.2);
-}
-&:clicked{
-  background-color: black;
-}
+const GridItemBacktHeader = styled.a`
+color: #404040;
+font:1.5rem NewBaskervilleExpOdC;
+text-decoration: none;
 `;
-
-const BoxContainer = styled.div`
-width: 1600px;
-height: 600px;
-text-align: center;
-background-color: RGBA(256,256,256,0.5);
+const GridItemBackDesc = styled.div`
+color: #404040;
+font:1rem NewBaskervilleExpOdC;
+padding-top:30px;
 `;
-
-const PersonName = styled.div`
-font-size: 50px;
-padding: 5px;
-height:60px;
-`;
-
-const PersonDesc = styled.div`
-padding: 20px;
-height:500px;
-display: inline-block;
-width: 50%;
-overflow: auto;
-overflow-x: hidden;
-`;
-
-const PersonImageContainer = styled.div`
-position: relative;
-width:50%;
-height:500px;
-display: inline-block;
-`;
-
-const PersonImage = styled.img`
-width: 400px;
-height: 400px;
+const GridItemBack = styled.div`
+background: grey;
+width: 100%;
+height: 100%;
 position: absolute;
-top:50%;
-left:50%;
-transform: translate(-50%, -50%);
+color: white;
+font: 1rem NewBaskervilleExpOdC;
+padding:2rem;
+letter-spacing: 0.1em;
+backface-visibility: hidden;
+transform: rotateY(180deg);
+overflow:hidden;
 `;
-
-const TransitionWrapper = styled.div`
-position: absolute;
-top: 10%;
-left: 50%;
-transform: translateX(-50%);
-`;
-
-const SwitchButton = (props) => {
-  const style = props.clicked ? {backgroundPosition: "left bottom", transform: "scale(1.2)"} : {} ;
-  return(
-    <Button style = {style} onClick = {props.click}>
-      {props.name}
-    </Button>
-  );
-};
-
-const Box  = (props) => {
-  return(
-    <BoxContainer>
-      <PersonName>{props.name}</PersonName>
-      <PersonImageContainer>
-        <PersonImage src = {props.image} />
-      </PersonImageContainer>
-      <PersonDesc>{props.desc}</PersonDesc>
-    </BoxContainer>
-  );
-};
 
 class Characters extends React.Component{
   constructor(props){
@@ -124,48 +81,30 @@ class Characters extends React.Component{
   }
 
   render(){
-    const data = dataChar["data"][this.state.clicked];
     return(
       <CharacterDiv>
-        <Transition
-          keys={this.state.clicked}
-          config={{tension:50}}
-          from={{top: -2000}}
-          enter={{top: 100}}
-          leave={{opacity: 0}}
-        >
-          {() => props => 
-            <TransitionWrapper style={props}>
-              {this.state.clicked === null ? <div>Choose the Character</div> : <Box name = {data.name} desc = {data.desc} image = {data.img}/> }
-            </TransitionWrapper>
-          }
-        </Transition>
-        <ButtonsContainer>
-          {dataChar["data"].map( (person, i) => (
-            <SwitchButton 
-              key = {i} 
-              name = {person["name"]} 
-              click = {() => this.click(i)}
+        <GridComponent>
+          {dataChar["data"].map((character, i) => (
+            <GridItem 
+              key = {i}
+              onClick = {() => this.click(i)}
               clicked = {this.state.clicked === i ? true : false}
-            />
+            >
+              <GridItemFront image = {character["img"]}>
+                <GridItemFrontCover>
+                </GridItemFrontCover>
+              </GridItemFront>
+              <GridItemBack>
+                <GridItemBacktHeader href ="https://twinpeaks.fandom.com/wiki/Shelly_Briggs">{character["name"]}</GridItemBacktHeader>
+                <GridItemBackDesc dangerouslySetInnerHTML= {{__html: character["desc"]}}></GridItemBackDesc>
+              </GridItemBack>
+            </GridItem>
           ))}
-        </ButtonsContainer>     
+        </GridComponent>
       </CharacterDiv>
     );
   }
 }
-
-SwitchButton.propTypes = {
-  clicked: PropTypes.number,
-  click: PropTypes.func,
-  name: PropTypes.string
-};
-
-Box.propTypes = {
-  name: PropTypes.string,
-  image : PropTypes.string,
-  desc : PropTypes.string
-};
 
 export default Characters;
 
