@@ -75,7 +75,7 @@ class Plot extends React.Component{
           >
             {items => props => <TransitionWrapper style={props}><Card image = {items.img} title={items.name} plot={items.plot}/></TransitionWrapper>}
           </Transition>
-          <Navigation changeCard = {this.changeCard} indexes = {Array.from(Array(this.length).keys())} />
+          <Navigation tracker ={this.state.index} changeCard = {this.changeCard} indexes = {Array.from(Array(this.length).keys())} />
         </CardWrapper>
       </Container>
     );

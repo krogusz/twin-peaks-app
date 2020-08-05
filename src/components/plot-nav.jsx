@@ -11,7 +11,8 @@ transform: translateX(-50%);
 `;
 
 const NavButton = styled.div`
-background: #c6c6c6;
+// background: #c6c6c6;
+background: ${props => props.tracker ? "grey" : "#c6c6c6" };
 border-radius: 50%;
 width: 30px;
 height: 30px;
@@ -50,7 +51,7 @@ const Navigation  = (props) => {
       </NavButton>
 
       {props.indexes.map( (i, key) =>(
-        <NavButton key = {key} onClick = {props.changeCard}>{i}</NavButton>
+        <NavButton tracker = {props.tracker === key} key = {key} onClick = {props.changeCard}>{i}</NavButton>
       ))}
 
       <NavButton onClick = {() => props.changeCard(1)}> 
