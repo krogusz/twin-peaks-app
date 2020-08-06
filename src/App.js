@@ -53,7 +53,7 @@ class App extends React.Component {
           <Spring 
             config = {{tension:120, friction: 120, delay: 1300}}
             from={{opacity: 0}}
-            to={{opacity: 0.3}}
+            to={{opacity: 1}}
           >
             {style => 
               <MenuButtonDiv>
