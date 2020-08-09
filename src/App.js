@@ -49,8 +49,6 @@ class App extends React.Component {
   }
 
   render(){
-  console.log(this.props)
-
     return(
       <div style = {{position: "relative"}}>
         <Router>
@@ -61,19 +59,17 @@ class App extends React.Component {
           >
             {style => 
               <div >
-              <HomeIcon style = {style}/>
-
-              <MenuButtonDiv>
-                <button 
-                  type = "button" 
-                  onClick = {this.toogleMenu}
-                  style = {style}
-                >
-                  {this.state.menuDisabled ? "Menu" : <img src={arrow} alt = ""/>}
-                </button>
-              </MenuButtonDiv >
+                <HomeIcon style = {style}/>
+                <MenuButtonDiv>
+                  <button 
+                    type = "button" 
+                    onClick = {this.toogleMenu}
+                    style = {style}
+                  >
+                    {this.state.menuDisabled ? "Menu" : <img src={arrow} alt = ""/>}
+                  </button>
+                </MenuButtonDiv >
               </div>
-
             }
           </Spring>
           <Route exact path = "/" > <MainPage /> </Route>

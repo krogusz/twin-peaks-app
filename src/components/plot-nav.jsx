@@ -69,7 +69,8 @@ Array.propTypes = {
 
 Navigation.propTypes = {
   changeCard: PropTypes.func,
-  indexes: PropTypes.array
+  indexes: PropTypes.array,
+  tracker: PropTypes.string
 }; 
 
 export  {Navigation};
