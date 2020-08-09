@@ -8,14 +8,16 @@ import Menu from "./components/menu.jsx";
 import Plot from "./components/plot.jsx";
 import Character from "./components/characters.jsx";
 import Facts from "./components/facts.jsx";
+import HomeIcon from "./components/home-icon.jsx";
 import seasonPlot from "./resources/seasons.js";
 import moviePlot from "./resources/movie.js";
 const arrow = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAmUlEQVRIie2UsQ3CMAAEnzRJwxigVAxDjdgpDTtkF6RkkxQZ4CiIEstyKLC/ghvgT37bL/0pBVADHXB0hJ+AgTdlBcAVmNgoIwCapZKYfAFwBsZEeL4AuAHzTvj3gg+VZHFYwltJvaRL1vETVMBd0tMRLkmVIzTEXtGK65JTIs8zjSS+jxZIfFMRiTxjF0l8cx1IGuBhE/wuL4q+v+UDi/jyAAAAAElFTkSuQmCC";
 
 const MenuButtonDiv = styled.div`
 position: absolute;
-top: 10px;
+top: 30px;
 left: 10px;
+transform: translateY(-50%);
 z-index: 9999;
 font: 0.75rem NewBaskervilleExpOdC; 
 & button{
@@ -47,6 +49,8 @@ class App extends React.Component {
   }
 
   render(){
+  console.log(this.props)
+
     return(
       <div style = {{position: "relative"}}>
         <Router>
@@ -56,6 +60,9 @@ class App extends React.Component {
             to={{opacity: 1}}
           >
             {style => 
+              <div >
+              <HomeIcon style = {style}/>
+
               <MenuButtonDiv>
                 <button 
                   type = "button" 
@@ -64,7 +71,9 @@ class App extends React.Component {
                 >
                   {this.state.menuDisabled ? "Menu" : <img src={arrow} alt = ""/>}
                 </button>
-              </MenuButtonDiv>
+              </MenuButtonDiv >
+              </div>
+
             }
           </Spring>
           <Route exact path = "/" > <MainPage /> </Route>
