@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import {device} from "../resources/RWS.js";
 
 const CardContainer = styled.div`
   height:500px;
@@ -20,6 +21,13 @@ height: 200px;
 padding: 16px;
 color: #545469;
 line-height: 1.5;
+@media ${device.mobile}{
+  height: 500px;
+};
+
+@media ${device.tablet}{
+  height: 500px;
+};
 `;
 
 const Title = styled.div`
@@ -32,6 +40,10 @@ const Plot = styled.div`
 font: NewBaskervilleExpOdC ;
 overflow: hidden;
 max-height: 144px;
+@media ${device.mobile}{
+  max-height: 9999px;
+  overflow: auto;
+}
 `;
 
 const Card = (props) => {

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import Card from "./season-card.jsx";
 import {Navigation} from "./plot-nav.jsx";
 import {Transition} from "react-spring/renderprops";
+import {device} from "../resources/RWS.js";
 
 const Container = styled.div`
 width:100vw;
@@ -19,13 +20,19 @@ transform: translate(-50%, -50%);
 width: 900px;
 height:600px;
 text-align: center;
+@media ${device.tablet}{
+  width: 500px;
+};
+@media ${device.mobile}{
+  width: 350px;
+};
 `;
 
 const TransitionWrapper = styled.div`
 position: absolute;
 top:0;
 left:0;
-width: 900px;
+width: 100%;
 `;
 
 class Plot extends React.Component{

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import {device} from "../resources/RWS.js";
 
 const NavigationContainer = styled.div`
 display: flex;
@@ -8,10 +9,14 @@ position: absolute;
 bottom: 0px;
 left:50%;
 transform: translateX(-50%);
+@media ${device.mobile}{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  bottom: -15%;
+}
 `;
 
 const NavButton = styled.div`
-// background: #c6c6c6;
 background: ${props => props.tracker ? "grey" : "#c6c6c6" };
 border-radius: 50%;
 width: 30px;
