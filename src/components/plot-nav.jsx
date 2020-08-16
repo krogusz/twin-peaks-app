@@ -3,16 +3,25 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import {device} from "../resources/RWS.js";
 
+const Nav = styled.div`
+position: absolute;
+bottom:0%;
+left:50%;
+transform: translateX(-50%);
+height:300px;
+width:100%;
+`;
+
 const NavigationContainer = styled.div`
 display: flex;
 position: absolute;
-bottom: 0px;
-left:50%;
-transform: translateX(-50%);
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
 @media ${device.mobile}{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  bottom: -15%;
+  // bottom: -15%;
 }
 `;
 
@@ -48,22 +57,25 @@ const Array = (props) => {
 };
 
 const Navigation  = (props) => {
-  return(          
-    <NavigationContainer>
-      <NavButton onClick = {() => props.changeCard(-1)}> 
-        <Array viewBox = "0 0 24 24" points= "15 18 9 12 15 6">
-        </Array>
-      </NavButton>
+  return(   
+    <Nav>
+      <NavigationContainer>
+        <NavButton onClick = {() => props.changeCard(-1)}> 
+          <Array viewBox = "0 0 24 24" points= "15 18 9 12 15 6">
+          </Array>
+        </NavButton>
 
-      {props.indexes.map( (i, key) =>(
-        <NavButton tracker = {props.tracker === key} key = {key} onClick = {props.changeCard}>{i}</NavButton>
-      ))}
+        {props.indexes.map( (i, key) =>(
+          <NavButton tracker = {props.tracker === key} key = {key} onClick = {props.changeCard}>{i}</NavButton>
+        ))}
 
-      <NavButton onClick = {() => props.changeCard(1)}> 
-        <Array viewBox = "0 0 20 24" points = "9 18 15 12 9 6" >
-        </Array>
-      </NavButton>
-    </NavigationContainer>
+        <NavButton onClick = {() => props.changeCard(1)}> 
+          <Array viewBox = "0 0 20 24" points = "9 18 15 12 9 6" >
+          </Array>
+        </NavButton>
+      </NavigationContainer>
+    </Nav>       
+    
   );
 };
 

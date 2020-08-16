@@ -1,6 +1,7 @@
 import React from "react";
 import styled, {keyframes} from "styled-components";
 import dataChar from "../resources/characters.js";
+import {device} from "../resources/RWS.js";
 
 const rotate = keyframes`
   from {
@@ -20,6 +21,21 @@ display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-gap: 20px;
 animation: ${rotate} 2s linear;
+
+@media ${device.laptopS}{
+  grid-template-columns: repeat(2, 1fr);
+  padding: 200px;
+};
+
+@media ${device.tablet}{
+  grid-template-columns: repeat(1, 1fr);
+  padding: 200px;
+  grid-gap: 20px;
+};
+@media ${device.mobile}{
+  grid-template-columns: repeat(1, 350px);
+  padding: 150px;
+};
 `;
 const GridItem = styled.div`
 height: 500px;

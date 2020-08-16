@@ -18,7 +18,7 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 width: 900px;
-height:600px;
+height:800px;
 text-align: center;
 @media ${device.tablet}{
   width: 500px;

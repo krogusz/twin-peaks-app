@@ -39,13 +39,13 @@ export default { "data":
     {
       "name": "Bobby Briggs",
       "img": "https://vignette.wikia.nocookie.net/twinpeaks/images/9/98/BobbyHiRes.jpg/revision/latest?cb=20161101195815",
-      "desc":"Robert \"Bobby\" Briggs was a student at the Twin Peaks High School and the boyfriend of Laura Palmer, thus one of the initial suspects in her murder. His father was Major Garland Briggs, a member of the United States Air Force, with whom he had an uneasy relationship. Bobby became jealous of James Hurley when he discovered that James was secretly seeing Laura. Laura, on the other hand, did not really love Bobby, and only used him as a source of cocaine. Even before Laura's death, Bobby was seeing Shelly Johnson.During the years following Laura's death, Bobby became a deputy in the Twin Peaks Sheriff's Department.",
+      "desc":"Robert \"Bobby\" Briggs was a student at the Twin Peaks High School and the boyfriend of Laura Palmer, thus one of the initial suspects in her murder. His father was Major Garland Briggs, a member of the United States Air Force, with whom he had an uneasy relationship.",
       "url":"https://twinpeaks.fandom.com/wiki/Bobby_Briggs"
     },
     {
       "name": "Shelly Johnson",
       "img": "https://biznes.wprost.pl/_thumb/4c/ac/d3df88470c17c0b4545e3ff20115.png",
-      "desc":"She was a waitress at the Double R Diner, which was owned by Norma Jennings, a friend and motherly figure to Shelly, who dropped out of high school to marry trucker Leo Johnson, who had swept her off her feet by lavishing her with attention. As soon as they got married, it turned out that Leo just \"wanted a maid he didn't have to pay for,\" in her words. Leo was a monstrous home dictator, wife-beater, and dangerous criminal, and he was tangibly connected to Laura Palmer's murder.As of 1989, Shelly was having an affair with Laura's boyfriend, Bobby Briggs, who, like Laura, was still in high school, and besides being a jock, he was something of a known hooligan. Although Bobby did not quite tread on the right side of the law, he was at least kind to Shelly, unlike Leo. The risk of the affair was great and Bobby dealt drugs for Leo and knew just how dangerous Leo was.",
+      "desc":"She was a waitress at the Double R Diner, which was owned by Norma Jennings, a friend and motherly figure to Shelly, who dropped out of high school to marry trucker Leo Johnson. Leo was a monstrous home dictator, wife-beater, and dangerous criminal, and he was tangibly connected to Laura Palmer's murder. <br/> <br/> <em>That's the kind of girl to make you wish you spoke a little French!</em> - Gordon Cole",
       "url":"https://twinpeaks.fandom.com/wiki/Shelly_Briggs"
     }
 
