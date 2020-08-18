@@ -11,6 +11,9 @@ width:100vw;
 height:100vh;
 background-color: #282830;
 position: relative;
+@media ${device.tablet}{
+  overflow: auto;
+}
 `;
 const CardWrapper = styled.div`
 position: absolute;
@@ -25,6 +28,9 @@ text-align: center;
 };
 @media ${device.mobile}{
   width: 350px;
+  top: 50%;
+  transform: translate(-50%, -30%);
+
 };
 `;
 

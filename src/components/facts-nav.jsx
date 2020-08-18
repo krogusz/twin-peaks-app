@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import {device} from "../resources/RWS.js";
 
 const NavigationContainer = styled.div`
 display: flex;
@@ -10,6 +11,9 @@ transform: translateY(-50%);
 width:100vw;
 height: 15em;
 overflow: hidden;
+@media ${device.tablet}{
+  overflow: visible;
+};
 `;
 
 const Button = styled.button`
@@ -27,6 +31,22 @@ margin-left: ${props => props.right ? "0" : "-7.5em" };
 text-align: ${props => props.right ? "left" : "right" };
 border: none;
 outline:none;
+@media ${device.tablet}{
+  top:0%;
+  left: ${props => props.right ? "50%" : "auto"};
+  right: ${props => props.right ? "auto" : "50%"};
+  transform: translateY(-70%);
+  margin: 0 30px 0 30px;
+  width: 10em;
+  height: 10em;
+};
+@media ${device.mobile}{
+  transform: translateY(-100%);
+  background-color: transparent;
+  margin: 0 70px 0 70px;
+  width: 5em;
+  height: 5em;
+};
 `;
 
 const Arrow = styled.span`
@@ -36,6 +56,14 @@ left: ${props => props.right ? "25%" : ""};
 right: ${props => !props.right ? "25%" : ""};
 top:50%;
 transform: translateY(-50%);
+@media ${device.tablet}{
+left:50%;
+top: 50%;
+transform: translate(-50%, -50%);
+};
+@media ${device.mobile}{
+  color: rgba(255,255,255,0.2);
+  };
 `;
 
 const Array = (props) => {

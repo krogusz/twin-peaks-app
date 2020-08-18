@@ -27,6 +27,7 @@ line-height: 1.5;
 
 @media ${device.tablet}{
   height: 500px;
+  overflow: auto;
 };
 `;
 

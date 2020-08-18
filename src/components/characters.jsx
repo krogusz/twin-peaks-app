@@ -31,10 +31,10 @@ animation: ${rotate} 2s linear;
   grid-template-columns: repeat(1, 1fr);
   padding: 200px;
   grid-gap: 20px;
+  overflow: scroll;
 };
 @media ${device.mobile}{
-  grid-template-columns: repeat(1, 350px);
-  padding: 150px;
+  padding: 20%;
 };
 `;
 const GridItem = styled.div`
@@ -66,6 +66,9 @@ const GridItemBackDesc = styled.div`
 color: #404040;
 font:1rem NewBaskervilleExpOdC;
 padding-top:30px;
+@media ${device.mobile}{
+  font: 0.7rem NewBaskervilleExpOdC;
+};
 `;
 const GridItemBack = styled.div`
 background: grey;
@@ -78,7 +81,7 @@ padding:2rem;
 letter-spacing: 0.1em;
 backface-visibility: hidden;
 transform: rotateY(180deg);
-overflow:hidden;
+overflow: hidden;
 `;
 
 class Characters extends React.Component{

@@ -5,6 +5,7 @@ import {Navigation} from "./facts-nav.jsx";
 import facts from "../resources/facts.js";
 import {Transition} from "react-spring/renderprops";
 import SplitText from "react-pose-text";
+import {device} from "../resources/RWS.js";
 
 const Container = styled.div`
 width:100vw;
@@ -13,6 +14,10 @@ background-color: #282830;
 position: relative;
 font: 1.75rem NewBaskervilleExpOdC ;
 overflow: hidden;
+@media ${device.mobile}{
+  overflow: auto;
+  font-size: 1rem;
+};
 `;
 
 const CardWrapper = styled.div`
@@ -20,9 +25,15 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-width: 900px;
+width: 800px;
 height:15em;
 text-align: center;
+@media ${device.tablet}{
+  width: 700px;
+};
+@media ${device.mobile}{
+  width: 80%;
+};
 `;
 
 const TransitionWrapper = styled.div`

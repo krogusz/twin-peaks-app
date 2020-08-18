@@ -21,7 +21,6 @@ transform: translate(-50%, -50%);
 @media ${device.mobile}{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  // bottom: -15%;
 }
 `;
 

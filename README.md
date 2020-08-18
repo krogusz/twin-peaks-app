@@ -17,4 +17,4 @@ I'm using:
 </div>
 
 <div>Page is available <a href="https://pensive-beaver-e59b1b.netlify.app/">here</a></div>
-<div>Page is in the development. Following issues will be carried: RWS, mute button.</div>
+<div>Page is in the development. Some issues will be developed</div> 
