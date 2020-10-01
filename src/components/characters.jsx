@@ -1,6 +1,6 @@
 import React from "react";
 import styled, {keyframes} from "styled-components";
-import dataChar from "../resources/characters.js";
+import dataChar from "../resources/characters.json";
 import {device} from "../resources/RWS.js";
 
 const rotate = keyframes`
@@ -103,19 +103,19 @@ class Characters extends React.Component{
     return(
       <CharacterDiv>
         <GridComponent>
-          {dataChar["data"].map((character, i) => (
+          {dataChar.map(({name, img, desc, url}, i) => (
             <GridItem 
-              key = {i}
+              key = {name}
               onClick = {() => this.click(i)}
               clicked = {this.state.clicked === i ? true : false}
             >
-              <GridItemFront image = {character["img"]}>
+              <GridItemFront image = {img}>
                 <GridItemFrontCover>
                 </GridItemFrontCover>
               </GridItemFront>
               <GridItemBack>
-                <GridItemBacktHeader href ="https://twinpeaks.fandom.com/wiki/Shelly_Briggs">{character["name"]}</GridItemBacktHeader>
-                <GridItemBackDesc dangerouslySetInnerHTML= {{__html: character["desc"]}}></GridItemBackDesc>
+                <GridItemBacktHeader href ={url}>{name}</GridItemBacktHeader>
+                <GridItemBackDesc dangerouslySetInnerHTML= {{__html: desc}}></GridItemBackDesc>
               </GridItemBack>
             </GridItem>
           ))}

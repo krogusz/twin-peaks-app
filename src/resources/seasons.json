@@ -1,4 +1,4 @@
-export default {
+{
   "season1":
     [
       {
@@ -168,4 +168,4 @@ export default {
         "plot":"BOB then turns on Cooper, who for the first time in the Lodge experiences fear. Cooper flees, pursued by BOB and a doppelganger of himself.Days after entering the Lodge, Cooper and Annie are discovered in the woods by Sheriff Truman. Annie is hospitalized, but Cooper's injuries are minor enough that Doctor Hayward is able to treat them in Cooper's room at the Great Northern Hotel. Upon waking, Cooper asks about Annie's condition, and then weirdly states he needs to brush his teeth. When Cooper enters the bathroom and looks into the mirror, his reflection reveals that he is now inhabited by BOB. He then rams his face into the mirror and while laughing, rhetorically continues asking about Annie."
       }
     ]
-};
+}

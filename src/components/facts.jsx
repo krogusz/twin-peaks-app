@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import {Navigation} from "./facts-nav.jsx";
-import facts from "../resources/facts.js";
+import facts from "../resources/facts.json";
 import {Transition} from "react-spring/renderprops";
 import SplitText from "react-pose-text";
 import {device} from "../resources/RWS.js";
@@ -58,11 +58,10 @@ class Facts extends React.Component{
       index: 0,
       dir: 0
     };
-    this.data = facts["facts"];
-    this.length = this.data.length;
+    this.length = facts.length;
   }
 
-  changeCard = (e) => {
+  handleChangeCard = (e) => {
     switch(e){
     case 1:
       this.setState({
@@ -90,7 +89,7 @@ class Facts extends React.Component{
       <Container>
         <CardWrapper>
           <Transition
-            items={this.data[this.state.index]} 
+            items={facts[this.state.index]} 
             keys={this.state.index}
             from={{opacity: 0, transform: `translate3d(${this.state.dir === 1 ? 75 : -75}%,-50%,0)` }}
             enter={{ opacity: 1, transform: "translate3d(0%,-50%,0)" }}
@@ -103,7 +102,7 @@ class Facts extends React.Component{
             </TransitionWrapper>}
           </Transition>
         </CardWrapper>
-        <Navigation changeCard = {this.changeCard} indexes = {Array.from(Array(this.length).keys())} />
+        <Navigation handleChangeCard = {this.handleChangeCard} indexes = {Array.from(Array(this.length).keys())} />
       </Container>
     );
   }

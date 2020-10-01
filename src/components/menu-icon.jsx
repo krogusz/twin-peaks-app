@@ -24,15 +24,15 @@ font: 0.75rem NewBaskervilleExpOdC;
 }
 `;
 
-const MenuIcon = (props) => {
+const MenuIcon = ({toogleMenu, style, menuDisabled}) => {
   return(
     <MenuButtonDiv>
       <button 
         type = "button" 
-        onClick = {props.toogleMenu}
-        style = {props.style}
+        onClick = {toogleMenu}
+        style = {style}
       >
-        {props.menuDisabled ? "Menu" : <img src={arrow} alt = ""/>}
+        {menuDisabled ? "Menu" : <img src={arrow} alt = ""/>}
       </button>
     </MenuButtonDiv >
   );

@@ -48,11 +48,11 @@ class Plot extends React.Component{
       index: 0,
       dir: 0
     };
-    this.data = typeof props.match.params.id === "undefined" ? props.plot[`data`]: props.plot[`season${props.match.params.id}`];
+    this.data = typeof props.match.params.id === "undefined" ? props.plot: props.plot[`season${props.match.params.id}`];
     this.length = this.data.length;
   }
 
-  changeCard = (e) => {
+  handleChangeCard = (e) => {
     switch(e){
     case 1:
       this.setState({
@@ -88,7 +88,7 @@ class Plot extends React.Component{
           >
             {items => props => <TransitionWrapper style={props}><Card image = {items.img} title={items.name} plot={items.plot}/></TransitionWrapper>}
           </Transition>
-          <Navigation tracker ={this.state.index} changeCard = {this.changeCard} indexes = {Array.from(Array(this.length).keys())} />
+          <Navigation tracker ={this.state.index} handleChangeCard = {this.handleChangeCard} indexes = {Array.from(Array(this.length).keys())} />
         </CardWrapper>
       </Container>
     );

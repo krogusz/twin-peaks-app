@@ -37,38 +37,38 @@ display: flex;
 align-items: center;
 `;
 
-const Array = (props) => {
+const Array = ({viewBox, points}) => {
   return(
     <svg
       xmlns = "http://www.w3.org/2000/svg"
       width = "30"
       height = "30"
-      viewBox = {props.viewBox}
+      viewBox = {viewBox}
       fill = "none"
       stroke = "currentColor"
       strokeWidth = "2"
       strokeLinecap = "round"
       strokeLinejoin = "round"
     >
-      <polyline points = {props.points}></polyline>
+      <polyline points = {points}></polyline>
     </svg>
   );
 };
 
-const Navigation  = (props) => {
+const Navigation  = ({indexes,handleChangeCard, tracker }) => {
   return(   
     <Nav>
       <NavigationContainer>
-        <NavButton onClick = {() => props.changeCard(-1)}> 
+        <NavButton onClick = {() => handleChangeCard(-1)}> 
           <Array viewBox = "0 0 24 24" points= "15 18 9 12 15 6">
           </Array>
         </NavButton>
 
-        {props.indexes.map( (i, key) =>(
-          <NavButton tracker = {props.tracker === key} key = {key} onClick = {props.changeCard}>{i}</NavButton>
+        {indexes.map( (i, key) =>(
+          <NavButton tracker = {tracker === key} key = {key} onClick = {handleChangeCard}>{i}</NavButton>
         ))}
 
-        <NavButton onClick = {() => props.changeCard(1)}> 
+        <NavButton onClick = {() => handleChangeCard(1)}> 
           <Array viewBox = "0 0 20 24" points = "9 18 15 12 9 6" >
           </Array>
         </NavButton>
@@ -84,7 +84,7 @@ Array.propTypes = {
 };
 
 Navigation.propTypes = {
-  changeCard: PropTypes.func,
+  handleChangeCard: PropTypes.func,
   indexes: PropTypes.array,
   tracker: PropTypes.string
 }; 

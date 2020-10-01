@@ -47,14 +47,14 @@ max-height: 144px;
 }
 `;
 
-const Card = (props) => {
+const Card = ({image, title, plot}) => {
   return(
     <CardContainer
-      image = {props.image}
+      image = {image}
     >
       <TextWrapper>
-        <Title>{props.title}</Title>
-        <Plot>{props.plot}</Plot>
+        <Title>{title}</Title>
+        <Plot>{plot}</Plot>
       </TextWrapper>
     </CardContainer>  
   );

@@ -66,29 +66,29 @@ transform: translate(-50%, -50%);
   };
 `;
 
-const Array = (props) => {
+const Array = ({viewBox, points}) => {
   return(
     <svg
       xmlns = "http://www.w3.org/2000/svg"
       width = "30"
       height = "30"
-      viewBox = {props.viewBox}
+      viewBox = {viewBox}
       fill = "none"
       stroke = "currentColor"
       strokeWidth = "2"
       strokeLinecap = "round"
       strokeLinejoin = "round"
     >
-      <polyline points = {props.points}></polyline>
+      <polyline points = {points}></polyline>
     </svg>
   );
 };
 
-const Navigation  = (props) => {
+const Navigation  = ({handleChangeCard}) => {
   return(          
     <NavigationContainer>
-      <Button right={false} onClick = {() => props.changeCard(-1)}><Arrow right={false}>←</Arrow></Button>
-      <Button right={true} onClick = {() => props.changeCard(1)}><Arrow right={true}>→</Arrow></Button>
+      <Button right={false} onClick = {() => handleChangeCard(-1)}><Arrow right={false}>←</Arrow></Button>
+      <Button right={true} onClick = {() => handleChangeCard(1)}><Arrow right={true}>→</Arrow></Button>
     </NavigationContainer>
   );
 };
@@ -99,7 +99,7 @@ Array.propTypes = {
 };
 
 Navigation.propTypes = {
-  changeCard: PropTypes.func
+  handleChangeCard: PropTypes.func
 };
 
 export  {Navigation};

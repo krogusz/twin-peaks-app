@@ -54,20 +54,20 @@ filter: sepia(70%);
 backface-visibility: hidden;
 `;
 
-const Item = (props) => {
+const Item = ({first, name, onClick, url}) => {
   const divStyle = {
-    borderRight: `${props.first? 1 : 1}px rgba(255,255,255,.09) solid`
+    borderRight: `${first? 1 : 1}px rgba(255,255,255,.09) solid`
   };
   return(
     <MenuItemDiv style = {divStyle}>
       <ItemLink 
-        to = {`/${props.name}`}
-        onClick = {props.onClick}
+        to = {`/${name}`}
+        onClick = {onClick}
       >
         <ItemWrapper >
-          {props.name}
+          {name}
         </ItemWrapper> 
-        <ItemImage image = {{url: props.url}}></ItemImage>
+        <ItemImage image = {{url: url}}></ItemImage>
       </ItemLink>
     </MenuItemDiv>
   );

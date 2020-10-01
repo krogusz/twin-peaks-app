@@ -1,4 +1,3 @@
-export default { "data":
   [
     {
       "name": "Audrey Horne",
@@ -48,6 +47,4 @@ export default { "data":
       "desc":"She was a waitress at the Double R Diner, which was owned by Norma Jennings, a friend and motherly figure to Shelly, who dropped out of high school to marry trucker Leo Johnson. Leo was a monstrous home dictator, wife-beater, and dangerous criminal, and he was tangibly connected to Laura Palmer's murder. <br/> <br/> <em>That's the kind of girl to make you wish you spoke a little French!</em> - Gordon Cole",
       "url":"https://twinpeaks.fandom.com/wiki/Shelly_Briggs"
     }
-
   ]
-};

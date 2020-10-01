@@ -9,8 +9,8 @@ import Character from "./components/characters.jsx";
 import Facts from "./components/facts.jsx";
 import HomeIcon from "./components/home-icon.jsx";
 import MenuIcon from "./components/menu-icon.jsx";
-import seasonPlot from "./resources/seasons.js";
-import moviePlot from "./resources/movie.js";
+import seasonPlot from "./resources/seasons.json";
+import moviePlot from "./resources/movie.json";
 
 class App extends React.Component {
   constructor(props){

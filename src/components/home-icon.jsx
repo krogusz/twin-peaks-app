@@ -23,13 +23,12 @@ font: 0.75rem NewBaskervilleExpOdC;
 }
 `;
 
-const HomeIcon = (props) => {
-
+const HomeIcon = ({style}) => {
   if (window.location.pathname === "/"){
     return null;
   }
   return(
-    <MenuButtonDiv style ={props.style}>
+    <MenuButtonDiv style ={style}>
       <Link to = {`/`} >
         <button 
           type = "button" 

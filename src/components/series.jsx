@@ -32,9 +32,9 @@ const ItemLink = styled(Link)`
 text-decoration: none;
 `;
 
-const Series = (props) => {
+const Series = ({style}) => {
   return(
-    <SeriesDiv style ={props.style}>
+    <SeriesDiv style ={style}>
       <SeriesSubDiv>
         {series.map((elem, i) => (
           <Spring
