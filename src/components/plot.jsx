@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import Card from "./season-card.jsx";
@@ -41,59 +41,48 @@ left:0;
 width: 100%;
 `;
 
-class Plot extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      index: 0,
-      dir: 0
-    };
-    this.data = typeof props.match.params.id === "undefined" ? props.plot: props.plot[`season${props.match.params.id}`];
-    this.length = this.data.length;
-  }
+const Plot = (props) => {
+  const [index, setIndex] = useState(0);
+  const [dir, setDir] = useState(0);
+  const data = typeof props.match.params.id === "undefined" ? props.plot: props.plot[`season${props.match.params.id}`];
+  const length = data.length;
 
-  handleChangeCard = (e) => {
+  const handleChangeCard = (e) => {
     switch(e){
     case 1:
-      this.setState({
-        index: (this.state.index + 1)%this.length,
-        dir: 1
-      });
+      setIndex((index + 1)%length);
+      setDir(1);
       break;
     case -1:
-      this.setState({
-        index: (this.state.index - 1 + this.length )%this.length,
-        dir: -1
-      });
+      setIndex((index - 1 + length )%length);
+      setDir(-1);
       break;
     default:
-    {const newDir = Number(e.target.innerHTML) > this.state.index ? 1 : -1;
-      this.setState({
-        index: Number(e.target.innerHTML),
-        dir: newDir
-      });}
+    {
+      const newDir = Number(e.target.innerHTML) > index ? 1 : -1;
+      setIndex(Number(e.target.innerHTML));
+      setDir(newDir);
     }
-  }
+    }
+  };
 
-  render(){
-    return(
-      <Container>
-        <CardWrapper>
-          <Transition
-            items={this.data[this.state.index]} 
-            keys={this.state.index}
-            from={{opacity: 0, transform: `translate3d(${this.state.dir === 1 ? 75 : -75}%,0,0) scale(0.5)`}}
-            enter={{ opacity: 1, transform: "translate3d(0%,0,0) scale(1)" }}
-            leave={{ opacity: 0, transform: `translate3d(${this.state.dir === 1 ? -75 : 75}%,0,0) scale(0.5)`}}
-          >
-            {items => props => <TransitionWrapper style={props}><Card image = {items.img} title={items.name} plot={items.plot}/></TransitionWrapper>}
-          </Transition>
-          <Navigation tracker ={this.state.index} handleChangeCard = {this.handleChangeCard} indexes = {Array.from(Array(this.length).keys())} />
-        </CardWrapper>
-      </Container>
-    );
-  }
-}
+  return(
+    <Container>
+      <CardWrapper>
+        <Transition
+          items={data[index]} 
+          keys={index}
+          from={{opacity: 0, transform: `translate3d(${dir === 1 ? 75 : -75}%,0,0) scale(0.5)`}}
+          enter={{ opacity: 1, transform: "translate3d(0%,0,0) scale(1)" }}
+          leave={{ opacity: 0, transform: `translate3d(${dir === 1 ? -75 : 75}%,0,0) scale(0.5)`}}
+        >
+          {items => props => <TransitionWrapper style={props}><Card image = {items.img} title={items.name} plot={items.plot}/></TransitionWrapper>}
+        </Transition>
+        <Navigation tracker ={index} handleChangeCard = {handleChangeCard} indexes = {Array.from(Array(length).keys())} />
+      </CardWrapper>
+    </Container>
+  );
+};
 
 Plot.propTypes = {
   plot: PropTypes.string,

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import {Navigation} from "./facts-nav.jsx";
 import facts from "../resources/facts.json";
 import {Transition} from "react-spring/renderprops";
@@ -51,69 +50,50 @@ const charPoses = {
   }
 };
 
-class Facts extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      index: 0,
-      dir: 0
-    };
-    this.length = facts.length;
-  }
+const Facts = () => {
+  const [index, setIndex] = useState(0);
+  const [dir, setDir] = useState(0);
+  const length = facts.length;
 
-  handleChangeCard = (e) => {
+  const handleChangeCard = (e) => {
     switch(e){
     case 1:
-      this.setState({
-        index: (this.state.index + 1)%this.length,
-        dir: 1
-      });
+      setIndex((index + 1)%length);
+      setDir(1);
       break;
     case -1:
-      this.setState({
-        index: (this.state.index - 1 + this.length )%this.length,
-        dir: -1
-      });
+      setIndex((index - 1 + length )%length);
+      setDir(-1);
       break;
     default:
-    {const newDir = Number(e.target.innerHTML) > this.state.index ? 1 : -1;
-      this.setState({
-        index: Number(e.target.innerHTML),
-        dir: newDir
-      });}
+    {
+      const newDir = Number(e.target.innerHTML) > this.state.index ? 1 : -1;
+      setIndex(Number(e.target.innerHTML));
+      setDir(newDir);
     }
-  }
+    }
+  };
 
-  render(){
-    return(
-      <Container>
-        <CardWrapper>
-          <Transition
-            items={facts[this.state.index]} 
-            keys={this.state.index}
-            from={{opacity: 0, transform: `translate3d(${this.state.dir === 1 ? 75 : -75}%,-50%,0)` }}
-            enter={{ opacity: 1, transform: "translate3d(0%,-50%,0)" }}
-            leave={{ opacity: 0,  transform: `translate3d(${this.state.dir === 1 ? -75 : 75}%,-50%,0)`}}
-          >
-            {items => props => <TransitionWrapper style={props}>
-              <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
-                {items}
-              </SplitText>
-            </TransitionWrapper>}
-          </Transition>
-        </CardWrapper>
-        <Navigation handleChangeCard = {this.handleChangeCard} indexes = {Array.from(Array(this.length).keys())} />
-      </Container>
-    );
-  }
-}
-
-Facts.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.number
-    })
-  }),
+  return(
+    <Container>
+      <CardWrapper>
+        <Transition
+          items={facts[index]} 
+          keys={index}
+          from={{opacity: 0, transform: `translate3d(${dir === 1 ? 75 : -75}%,-50%,0)` }}
+          enter={{ opacity: 1, transform: "translate3d(0%,-50%,0)" }}
+          leave={{ opacity: 0,  transform: `translate3d(${dir === 1 ? -75 : 75}%,-50%,0)`}}
+        >
+          {items => props => <TransitionWrapper style={props}>
+            <SplitText initialPose="exit" pose="enter" charPoses={charPoses}>
+              {items}
+            </SplitText>
+          </TransitionWrapper>}
+        </Transition>
+      </CardWrapper>
+      <Navigation handleChangeCard = {handleChangeCard} indexes = {Array.from(Array(length).keys())} />
+    </Container>
+  );
 };
 
 export default Facts;

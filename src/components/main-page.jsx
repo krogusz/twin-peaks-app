@@ -11,13 +11,11 @@ height:100vh;
 filter: sepia(30%);
 `;
 
-class MainPage extends React.Component {
-  render(){
-    return (
-      <MainPageDiv >
-      </MainPageDiv>
-    );
-  }
-}
+const MainPage = () => {
+  return (
+    <MainPageDiv >
+    </MainPageDiv>
+  );
+};
 
 export default MainPage;

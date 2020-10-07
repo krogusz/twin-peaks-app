@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styled, {keyframes} from "styled-components";
 import dataChar from "../resources/characters.json";
 import {device} from "../resources/RWS.js";
@@ -84,46 +84,31 @@ transform: rotateY(180deg);
 overflow: hidden;
 `;
 
-class Characters extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      clicked: null
-    };
-    this.click = this.click.bind(this);
-  }
-
-  click = (i) => {
-    this.setState({
-      clicked: this.state.clicked === i ? null : i
-    });
-  }
-
-  render(){
-    return(
-      <CharacterDiv>
-        <GridComponent>
-          {dataChar.map(({name, img, desc, url}, i) => (
-            <GridItem 
-              key = {name}
-              onClick = {() => this.click(i)}
-              clicked = {this.state.clicked === i ? true : false}
-            >
-              <GridItemFront image = {img}>
-                <GridItemFrontCover>
-                </GridItemFrontCover>
-              </GridItemFront>
-              <GridItemBack>
-                <GridItemBacktHeader href ={url}>{name}</GridItemBacktHeader>
-                <GridItemBackDesc dangerouslySetInnerHTML= {{__html: desc}}></GridItemBackDesc>
-              </GridItemBack>
-            </GridItem>
-          ))}
-        </GridComponent>
-      </CharacterDiv>
-    );
-  }
-}
+const Characters = () => {
+  const [clicked, setClicked] = useState(null);
+  return(
+    <CharacterDiv>
+      <GridComponent>
+        {dataChar.map(({name, img, desc, url}, i) => (
+          <GridItem 
+            key = {name}
+            onClick = {() => setClicked(clicked === i ? null : i)}
+            clicked = {clicked === i ? true : false}
+          >
+            <GridItemFront image = {img}>
+              <GridItemFrontCover>
+              </GridItemFrontCover>
+            </GridItemFront>
+            <GridItemBack>
+              <GridItemBacktHeader href ={url}>{name}</GridItemBacktHeader>
+              <GridItemBackDesc dangerouslySetInnerHTML= {{__html: desc}}></GridItemBackDesc>
+            </GridItemBack>
+          </GridItem>
+        ))}
+      </GridComponent>
+    </CharacterDiv>
+  );
+};
 
 export default Characters;
 
